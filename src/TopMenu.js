@@ -1,12 +1,22 @@
 import React from "react"
+import styled from "styled-components"
 
-class TopMenu extends React.Component{
+const StyledTopMenu = styled.div`
+background: #000;
+width: 100%;
+ height: 45px;
+`
+const StyledItemMenu = styled.div`
 
-  render() {
-    return <div>
+`
 
-    </div>
-  }
+class TopMenu extends React.Component {
+
+    render() {
+        return <StyledTopMenu>
+            <StyledItemMenu><img src="" alt="logo"/></StyledItemMenu>
+        </StyledTopMenu>
+    }
 }
 
 export default TopMenu
