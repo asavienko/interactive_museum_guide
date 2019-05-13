@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import smartPhone from "./images/smartPhone.svg"
+//import smartPhone from "./images/smartPhone.svg"
 
 
 const StyledTopMenu = styled.div`
@@ -33,7 +33,7 @@ const StyledTopItemsParagraph = styled.li`
     align-items: center;
     
     :hover {
-     background: #0000ff73;
+    background: #0000ff73;
     cursor: pointer;
     transition: 1s;
   }
@@ -50,23 +50,27 @@ const StyledTopSocial = styled.div`
 `
 const StyledTopSocialIcons = styled.div`
     
-`
-const menuElements = [{name: "Гид по музею", attributes: {name: "#id"}}, "Описание", "Скачать", "FAQ", "Контакты", "Наши партнёры"];
-
+`;
 
 class TopMenu extends React.Component {
+// todo add smartPhone image to git and download it
+  render() {
+    return <StyledTopMenu>
+      {/* <StyledTopLogo>
+        <StyledTopLogoImages src={smartPhone} alt="logo"/></StyledTopLogo>*/}
+      <StyledTopWrapp>
+        <StyledTopItems>
+          <StyledTopItemsParagraph>Гид по музею</StyledTopItemsParagraph>
+          <StyledTopItemsParagraph>Описание</StyledTopItemsParagraph>
+          <StyledTopItemsParagraph>Скачать</StyledTopItemsParagraph>
+          <StyledTopItemsParagraph>FAQ</StyledTopItemsParagraph>
+          <StyledTopItemsParagraph>Контакты</StyledTopItemsParagraph>
+          <StyledTopItemsParagraph>Наши партнёры</StyledTopItemsParagraph>
+        </StyledTopItems>
+      </StyledTopWrapp>
 
-    render() {
-        return <StyledTopMenu>
-            <StyledTopLogo><StyledTopLogoImages src={smartPhone} alt="logo"/></StyledTopLogo>
-            <StyledTopWrapp>
-                <StyledTopItems>
-                    {menuElements.map(item=> <StyledTopItemsParagraph>{item} </StyledTopItemsParagraph>)}
-                </StyledTopItems>
-            </StyledTopWrapp>
-
-        </StyledTopMenu>
-    }
+    </StyledTopMenu>
+  }
 }
 
 export default TopMenu
