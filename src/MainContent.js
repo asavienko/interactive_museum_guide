@@ -15,9 +15,9 @@ class MainContent extends React.Component {
       <Home/>
       <Description/>
       <Download/>
+      <Partners/>
       <Rewiews/>
       <Faq/>
-      <Partners/>
     </div>
   }
 }

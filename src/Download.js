@@ -1,12 +1,61 @@
 import React from "react"
+import styled from "styled-components";
+import {Col, Divider, Row} from "antd";
+import {Button, Radio, Icon} from 'antd';
 
-class Download extends React.Component{
+const BoxDescription = styled.div`
+margin: 15px;
+`;
+const BoxButton = styled.div`
+margin: 15px  0;
+`;
 
-  render() {
-    return <div>
+class Download extends React.Component {
+    state = {
+        size: 'large',
+    };
 
-    </div>
-  }
+
+    render() {
+        const size = this.state.size;
+
+        return <div>
+            <Divider>О нас</Divider>
+            <BoxDescription>
+                <Row type="flex" justify="center" align="center">
+                    <Col span={12} order={1}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
+                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
+                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
+                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
+                        dignissimos fugiat illum porro quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                        accusantium
+                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
+                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
+                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
+                        dignissimos fugiat illum porro quam.</Col>
+                    <Col span={12} order={2}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
+                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
+                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
+                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
+                        dignissimos fugiat illum porro quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                        accusantium
+                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
+                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
+                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
+                        dignissimos fugiat illum porro quam.</Col>
+                </Row>
+            </BoxDescription>
+
+            <BoxButton>
+                <Row type="flex" justify="center" align="center">
+                    <Button type="primary" icon="download" size={this.state.large}>
+                        Скачать
+                    </Button>
+                </Row>
+            </BoxButton>
+
+        </div>
+    }
 }
 
 export default Download

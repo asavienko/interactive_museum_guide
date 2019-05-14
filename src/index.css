@@ -34,3 +34,12 @@ code {
   font-size: 23px;
   font-weight: bold;
 }
+
+.ant-col-12 {
+  text-align: justify;
+  padding: 5px 15px!important;
+}
+
+.ant-timeline-item-content {
+  color: #fff;
+}
