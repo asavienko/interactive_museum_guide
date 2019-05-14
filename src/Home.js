@@ -1,5 +1,5 @@
 import React from "react"
-import {Divider} from 'antd';
+import {Divider, Menu} from 'antd';
 import {Row, Col} from 'antd';
 import styled from "styled-components";
 
@@ -11,7 +11,7 @@ class Home extends React.Component {
 
     render() {
         return <WrapBoxAbout>
-            <Divider>О нас</Divider>
+            <Divider>Гид по музею</Divider>
             <Row type="flex" justify="start">
                 <Col span={12} order={1}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eligendi enim hic in ipsam iure

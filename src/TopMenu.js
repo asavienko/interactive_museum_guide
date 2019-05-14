@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import {Menu} from "antd";
 
-//import smartPhone from "./images/smartPhone.svg"
-
 
 const StyledTopMenu = styled.div`
     background: #000;
@@ -58,15 +56,14 @@ class TopMenu extends React.Component {
 // todo add smartPhone image to git and download it
     render() {
         return <Menu mode="horizontal" theme="dark">
-                <Menu.Item>Гид по музею</Menu.Item>
-                <Menu.Item>Описание</Menu.Item>
-                <Menu.Item>Скачать</Menu.Item>
-                <Menu.Item>FAQ</Menu.Item>
-                <Menu.Item>Контакты</Menu.Item>
-                <Menu.Item>Наши партнёры</Menu.Item>
-            </Menu>
+            <Menu.Item>Гид по музею</Menu.Item>
+            <Menu.Item>Описание</Menu.Item>
+            <Menu.Item>Скачать</Menu.Item>
+            <Menu.Item>FAQ</Menu.Item>
+            <Menu.Item>Наши партнёры</Menu.Item>
+        </Menu>
 
-            }
-            }
+    }
+}
 
-            export default TopMenu
+export default TopMenu
