@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import {Menu} from "antd";
+
 //import smartPhone from "./images/smartPhone.svg"
 
 
@@ -55,31 +56,17 @@ const StyledTopSocialIcons = styled.div`
 
 class TopMenu extends React.Component {
 // todo add smartPhone image to git and download it
-  render() {
-    return <Menu mode="horizontal" theme="dark">
-      <Menu.Item>Гид по музею</Menu.Item>
-      <Menu.Item>Описание</Menu.Item>
-      <Menu.Item>Скачать</Menu.Item>
-      <Menu.Item>FAQ</Menu.Item>
-      <Menu.Item>Контакты</Menu.Item>
-      <Menu.Item>Наши партнёры</Menu.Item>
-    </Menu>
-    /*<StyledTopMenu>
-      {/!* <StyledTopLogo>
-        <StyledTopLogoImages src={smartPhone} alt="logo"/></StyledTopLogo>*!/}
-      <StyledTopWrapp>
-        <StyledTopItems>
-          <StyledTopItemsParagraph>Гид по музею</StyledTopItemsParagraph>
-          <StyledTopItemsParagraph>Описание</StyledTopItemsParagraph>
-          <StyledTopItemsParagraph>Скачать</StyledTopItemsParagraph>
-          <StyledTopItemsParagraph>FAQ</StyledTopItemsParagraph>
-          <StyledTopItemsParagraph>Контакты</StyledTopItemsParagraph>
-          <StyledTopItemsParagraph>Наши партнёры</StyledTopItemsParagraph>
-        </StyledTopItems>
-      </StyledTopWrapp>
+    render() {
+        return <Menu mode="horizontal" theme="dark">
+                <Menu.Item>Гид по музею</Menu.Item>
+                <Menu.Item>Описание</Menu.Item>
+                <Menu.Item>Скачать</Menu.Item>
+                <Menu.Item>FAQ</Menu.Item>
+                <Menu.Item>Контакты</Menu.Item>
+                <Menu.Item>Наши партнёры</Menu.Item>
+            </Menu>
 
-    </StyledTopMenu>*/
-  }
-}
+            }
+            }
 
-export default TopMenu
+            export default TopMenu
