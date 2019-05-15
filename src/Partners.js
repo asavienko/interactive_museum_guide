@@ -5,6 +5,7 @@ class Partners extends React.Component{
 
 
   render() {
+
     return <div>
       <Divider>Наши партнеры</Divider>
 
