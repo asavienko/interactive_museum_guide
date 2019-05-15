@@ -1,31 +1,62 @@
 import React from "react"
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-import styled from "styled-components";
-
-const style = {
-  width: '500px',
-  height: '500px'
-};
+import {GoogleApiWrapper, Map} from 'google-maps-react';
 
 
 export class MapContainer extends React.Component {
-  constructor(props){
-    super(props)
-  }
+  constructor(props) {
+    super(props);
+  };
+
   fetchPlaces(mapProps, map) {
     const {google} = mapProps;
-    const service = new google.maps.places.PlacesService(map);
-    // ...
-  }
-  render() {
+    const searchProperties = {
+      mode: 'no-cors', keyword: "Музей", location: {
+        lat: 50.004985,
+        lng: 36.231091
+      }, radius: 4000,
+    };
+    const infoWindowProperties ={
+      pixelOffset: new google.maps.Size(-24,0)
+    };
 
+    const service = new google.maps.places.PlacesService(map);
+    const infowindow = new google.maps.InfoWindow(infoWindowProperties);
+    service.nearbySearch(searchProperties, (result) => result.forEach(function (place) {
+        createMarker(place);
+      })
+    );
+
+    const createMarker = function (place) {
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
+      };
+      const markerProperties = {
+        map: map,
+        icon: icon,
+        position: place.geometry.location
+      };
+
+      let marker = new google.maps.Marker(markerProperties);
+
+      google.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+      });
+
+    };
+
+
+  };
+  render() {
     return (
       <Map
         google={this.props.google}
-        onReady={this.fetchPlaces.bind(this)}
-
+        onReady={this.fetchPlaces}
         zoom={14}
-        style={style}
         initialCenter={{
           lat: 50.004985,
           lng: 36.231091
@@ -33,15 +64,14 @@ export class MapContainer extends React.Component {
         mapTypeControl={false}
         streetViewControl={false}
         fullscreenControl={false}
-      >
-        <Marker />
+        {...this.props}
+      />
 
-      </Map>
     );
   }
 }
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCPRn3rb3qvcFAqdi6_CwaxQgmiWZg-iL4",
-
+  language: "ru"
 })(MapContainer)
