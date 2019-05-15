@@ -7,6 +7,7 @@ import Faq from "./Faq";
 import Partners from "./Partners";
 import TopSlider from "./TopSlider";
 
+
 class MainContent extends React.Component {
 
   render() {

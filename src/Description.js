@@ -29,7 +29,7 @@ class Description extends React.Component {
                 <Advantages>
                     <p>Наши преимущества</p>
                 </Advantages>
-                <Row type="flex" justify="center" align="center">
+                <Row type="flex" justify="center" align="middle">
                     <Timeline>
                         <Timeline.Item>Эксклюзивность</Timeline.Item>
                         <Timeline.Item>Экономия времени</Timeline.Item>

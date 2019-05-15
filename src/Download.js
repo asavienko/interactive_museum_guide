@@ -17,7 +17,7 @@ class Download extends React.Component {
         return <div>
             <Divider>О нас</Divider>
             <BoxDescription>
-                <Row type="flex" justify="center" align="center">
+                <Row type="flex" justify="center" align="middle">
                     <Col span={12} order={1}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
                         adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
                         laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
@@ -42,7 +42,7 @@ class Download extends React.Component {
             </BoxDescription>
 
             <BoxButton>
-                <Row type="flex" justify="center" align="center">
+                <Row type="flex" justify="center" align="middle">
                     <Button type="primary" icon="download" size={'large'}>
                         Скачать
                     </Button>
