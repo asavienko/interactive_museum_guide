@@ -11,14 +11,9 @@ margin: 15px  0;
 `;
 
 class Download extends React.Component {
-    state = {
-        size: 'large',
-    };
 
 
     render() {
-        const size = this.state.size;
-
         return <div>
             <Divider>О нас</Divider>
             <BoxDescription>
@@ -48,7 +43,7 @@ class Download extends React.Component {
 
             <BoxButton>
                 <Row type="flex" justify="center" align="center">
-                    <Button type="primary" icon="download" size={this.state.large}>
+                    <Button type="primary" icon="download" size={'large'}>
                         Скачать
                     </Button>
                 </Row>
