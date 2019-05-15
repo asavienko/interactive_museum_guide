@@ -62,7 +62,6 @@ class TopMenu extends React.Component {
             <Menu.Item>FAQ</Menu.Item>
             <Menu.Item>Наши партнёры</Menu.Item>
         </Menu>
-
     }
 }
 
