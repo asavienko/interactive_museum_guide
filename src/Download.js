@@ -12,7 +12,6 @@ margin: 15px  0;
 
 class Download extends React.Component {
 
-
     render() {
         return <div>
             <Divider>О нас</Divider>
@@ -40,15 +39,13 @@ class Download extends React.Component {
                         dignissimos fugiat illum porro quam.</Col>
                 </Row>
             </BoxDescription>
-
             <BoxButton>
                 <Row type="flex" justify="center" align="middle">
-                    <Button type="primary" icon="download" size={'large'}>
+                    <Button type="primary" icon="download" size='large'>
                         Скачать
                     </Button>
                 </Row>
             </BoxButton>
-
         </div>
     }
 }
