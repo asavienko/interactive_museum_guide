@@ -9,17 +9,17 @@ import pic2 from "./images/pic2.jpg";
 
 class TopSlider extends React.Component {
 
-    render() {
-        return <div>
-            <Carousel autoplay>
-
-                    <img src={pic8} alt=""/>
-
-                    <img src={pic9} alt=""/>
-
-            </Carousel>
-        </div>
-    }
+  render() {
+    return <div>
+      <Carousel autoplay>
+        <img src={pic8} alt=""/>
+        <img src={pic9} alt=""/>
+        <img src={pic1} alt=""/>
+        <img src={pic10} alt=""/>
+        <img src={pic2} alt=""/>
+      </Carousel>
+    </div>
+  }
 }
 
 export default TopSlider
