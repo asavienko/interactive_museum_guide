@@ -12,20 +12,8 @@ code {
     monospace;
 }
 
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #001529;
-  overflow: hidden;
-}
 
-.ant-carousel .slick-slide div img {
-  /*color: #fff;*/
-  width:100%;
-  height: 500px;
-  object-fit: cover;
-}
+
 
 .ant-divider-inner-text {
   display: inline-block;
