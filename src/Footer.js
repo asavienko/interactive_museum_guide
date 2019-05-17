@@ -8,6 +8,7 @@ color: #fff;
 display: flex;
 align-items: center;
 padding: 10px;
+
 `;
 
 class Footer extends React.Component{
