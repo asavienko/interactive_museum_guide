@@ -21,13 +21,15 @@ class TopSlider extends React.Component {
       transitionIn: false,
     }
   }
-
-  runTransition = (prev , next) => {
-    console.log(prev , next)
+  startAnimation=()=>{
+    setTimeout(()=>this.setState({firstTransitionIn: true}),300)
   };
-  onChange = (c, n) => {
-    console.log(c, n);
-    this.setState({transitionIn: !!n})
+
+  setTransitionIn = () => {
+    this.setState({firstTransitionIn: true});
+  };
+  setTransitionOut = () => {
+    this.setState({firstTransitionIn: false});
   };
 
 
@@ -35,11 +37,10 @@ class TopSlider extends React.Component {
     return <div>
       <Carousel
         autoplay
-        /*afterChange={() => this.runTransition(true)}*/
-        /*beforeChange={this.runTransition}>*/
-        beforeChange={this.onChange}>
-        <SlideComponent inProp={this.state.transitionIn} key={1}/>
-        <SlideComponent inProp={this.state.transitionIn} key={2}/>
+        afterChange={this.setTransitionIn}
+        beforeChange={this.setTransitionOut}
+      >
+        <SlideComponent inProp={this.state.firstTransitionIn} startAnimation={this.startAnimation}/>
         {/*<StyledImage src={pic9} alt=""/>
         <StyledImage src={pic1} alt=""/>
       <StyledImage src={pic10} alt=""/>

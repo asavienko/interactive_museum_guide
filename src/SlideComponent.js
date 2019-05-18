@@ -35,6 +35,9 @@ left: 50%;
 transform: translate(-50%, -50%);
 max-width: 90vw;
 `;
+const StyledWraper = styled.div`
+position: relative;
+`
 
 const duration = 300;
 
@@ -43,35 +46,81 @@ const defaultStyle = {
   opacity: 0,
 };
 
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered:  { opacity: 1 },
-  exiting:  { opacity: 0 },
-  exited:  { opacity: 0 },
+const transitionStylesImage = {
+  entering: {opacity: 1},
+  entered: {opacity: 1},
+  exiting: {opacity: 0},
+  exited: {opacity: 0},
+};
+
+const transitionStylesTitle = {
+  entering: {opacity: 1},
+  entered: {opacity: 1},
+  exiting: {opacity: 0},
+  exited: {opacity: 0},
+};
+
+const transitionStylesText = {
+  entering: {opacity: 1},
+  entered: {opacity: 1},
+  exiting: {opacity: 0},
+  exited: {opacity: 0},
 };
 
 
-const SlideComponent = function (props) {
-  const {inProp} = props;
-  return <StyledSlide>
-    <StyledAnimateDiv>
-      <Transition in={inProp} timeout={duration}>
-     {state=>( <div style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        <StyledBrainImage src={brainLogo}/>
-      </div>)}
+class SlideComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      secondTransitionIn: false,
+    }
+  }
+componentDidMount() {
+    this.props.startAnimation()
+}
 
-      </Transition>
+  secondTransitionStart = () => {
+    this.setState({secondTransitionIn: true})
+  };
 
-      <div>
-        <StyledTitle level={3}>Интелектуальное распознование экспонатов</StyledTitle>
-        <StyledText string>быстро и точно определяет экспонат и находит информацию о нем</StyledText>
-      </div>
-    </StyledAnimateDiv>
-    <StyledImage src={pic8} alt=""/>
-  </StyledSlide>
-};
 
-export default SlideComponent
+  render() {
+    const {inProp} = this.props;
+    return <StyledSlide>
+      <StyledAnimateDiv>
+        <Transition in={inProp} timeout={duration} onEntered={this.secondTransitionStart}>
+          {state => (<StyledWraper>
+              < StyledBrainImage src={brainLogo} style={{
+                ...defaultStyle,
+                ...transitionStylesImage[state]
+              }}/>
+            </StyledWraper>
+          )}
+        </Transition>
+        <Transition in={this.state.secondTransitionIn} timeout={duration}>
+          {state => (<div>
+            <StyledTitle
+              level={3}
+              style={{
+                ...defaultStyle,
+                ...transitionStylesTitle[state]
+              }}>
+              Интелектуальное распознование экспонатов
+            </StyledTitle>
+            <StyledText
+              string
+              style={{
+                ...defaultStyle,
+                ...transitionStylesText[state]
+              }}>
+              быстро и точно определяет экспонат и находит информацию о нем
+            </StyledText>
+          </div>)}
+        </Transition>
+      </StyledAnimateDiv>
+      <StyledImage src={pic8} alt=""/>
+    </StyledSlide>
+  }
+}
+
+export default SlideComponent;
