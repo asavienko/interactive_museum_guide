@@ -57,7 +57,7 @@ class Faq extends React.Component{
                 <CustomPanelStyle header="История посищеения и понравившихся экспонатов" key="3" >
                     <p>{textThree}</p>
                 </CustomPanelStyle>
-                <CustomPanelStyle header="Настроить получение оповещаний" key="3" >
+                <CustomPanelStyle header="История посищеения и понравившихся экспонатов" key="3" >
                     <p>{textFour}</p>
                 </CustomPanelStyle>
             </Collapse>
