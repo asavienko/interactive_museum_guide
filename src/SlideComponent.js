@@ -19,9 +19,10 @@ const StyledImageOverlay = styled.div`
   position: absolute;
 `
 const StyledSlide = styled.div`
+overflow: hidden;
 position: relative;
 `;
-const StyledBrainImage = styled.img`
+const StyledLogoImage = styled.img`
     width: 9rem;
     height: 9rem;
     opacity: 0.94;
@@ -30,10 +31,12 @@ const StyledTitle = styled(Title)`
 color: white!important;
 width: max-content;
 max-width: 70vw;
+text-shadow: 0 0.3vw 0.9vw black;
 `;
 const StyledText = styled(Text)`
-font-size: 1.13rem;
-color: #ffd395!important;
+font-size: 1.1rem;
+color: white!important;
+text-shadow: 0 0.3vw 0.9vw black;
 `;
 const StyledAnimateDiv = styled.div`
 position: absolute;
@@ -42,14 +45,14 @@ align-items: center;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-max-width: 90vw;
+max-width: 100vw;
 z-index: 10;
 `;
 const StyledWrapper = styled.div`
 position: relative;
-`
+`;
 
-const duration = 300;
+const duration = 500;
 
 const defaultStyle = {
   transition: `transform ${duration}ms ease-in-out`,
@@ -59,10 +62,10 @@ const imageTransitionStyle = {
 };
 
 const transitionStylesLogo = {
-  entering: {transform: 'translate(0vw)'},
-  entered: {transform: 'translate(0vw)'},
-  exiting: {transform: 'translate(-50vw)'},
-  exited: {transform: 'translate(-50vw)'},
+  entering: {transform: 'translate(0)'},
+  entered: {transform: 'translate(0)'},
+  exiting: {transform: 'translate(-100vw)'},
+  exited: {transform: 'translate(-100vw)'},
 };
 
 const transitionStylesTitle = {
@@ -88,25 +91,31 @@ class SlideComponent extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.props.startAnimation()
-  }
 
   secondTransitionStart = () => {
     this.setState({secondTransitionIn: true})
   };
+  secondTransitionStop = () => {
+    this.setState({secondTransitionIn: false})
+  };
 
 
   render() {
-    const {inProp} = this.props;
+    const {inProp, logo, title, description} = this.props;
     return <StyledSlide>
       <StyledAnimateDiv>
-        <Transition in={inProp} timeout={duration} onEntered={this.secondTransitionStart}>
+        <Transition
+          in={inProp}
+          timeout={duration}
+          onEntered={this.secondTransitionStart}
+          onExiting={this.secondTransitionStop}>
           {state => (<StyledWrapper>
-              < StyledBrainImage src={brainLogo} style={{
-                ...defaultStyle,
-                ...transitionStylesLogo[state]
-              }}/>
+              < StyledLogoImage
+                src={logo}
+                style={{
+                  ...defaultStyle,
+                  ...transitionStylesLogo[state]
+                }}/>
             </StyledWrapper>
           )}
         </Transition>
@@ -118,7 +127,7 @@ class SlideComponent extends React.Component {
                 ...defaultStyle,
                 ...transitionStylesTitle[state]
               }}>
-              Интелектуальное распознование экспонатов
+              {title}
             </StyledTitle>
             <StyledText
               string
@@ -126,13 +135,13 @@ class SlideComponent extends React.Component {
                 ...imageTransitionStyle,
                 ...transitionStylesText[state]
               }}>
-              быстро и точно определяет экспонат и находит информацию о нем
+              {description}
             </StyledText>
           </div>)}
         </Transition>
       </StyledAnimateDiv>
       <StyledImageOverlay/>
-      <StyledImage src={pic8} alt=""/>
+      <StyledImage src={pic8} alt="" onLoad={this.props.startAnimation}/>
     </StyledSlide>
   }
 }
