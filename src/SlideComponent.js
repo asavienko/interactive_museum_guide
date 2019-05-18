@@ -142,10 +142,11 @@ class SlideComponent extends React.Component {
       <StyledImageOverlay/>
       <StyledBackground
         onPlaying={this.props.startAnimation}
-
+        muted
         loop
         autoPlay
-      ><source src={videoSrc}/></StyledBackground>
+        src={videoSrc}
+      />
     </StyledSlide>
   }
 }
