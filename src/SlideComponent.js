@@ -1,23 +1,22 @@
-import brainLogo from "./images/brainLogo.svg";
 import pic8 from "./images/pic8.jpg";
 import {Typography} from "antd";
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
 import {Transition} from "react-transition-group";
 
 const {Title, Text} = Typography;
 
-const StyledImage = styled.img`
+const StyledBackground = styled.video` 
   width:100%;
   height: 100vh;
   object-fit: cover;
 `;
 const StyledImageOverlay = styled.div`
   width:100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0,0,0, 0.5);
   position: absolute;
-`
+`;
 const StyledSlide = styled.div`
 overflow: hidden;
 position: relative;
@@ -101,7 +100,7 @@ class SlideComponent extends React.Component {
 
 
   render() {
-    const {inProp, logo, title, description} = this.props;
+    const {inProp, logo, title, description, videoSrc} = this.props;
     return <StyledSlide>
       <StyledAnimateDiv>
         <Transition
@@ -141,7 +140,12 @@ class SlideComponent extends React.Component {
         </Transition>
       </StyledAnimateDiv>
       <StyledImageOverlay/>
-      <StyledImage src={pic8} alt="" onLoad={this.props.startAnimation}/>
+      <StyledBackground
+        onPlaying={this.props.startAnimation}
+
+        loop
+        autoPlay
+      ><source src={videoSrc}/></StyledBackground>
     </StyledSlide>
   }
 }

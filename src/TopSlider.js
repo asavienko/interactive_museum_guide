@@ -2,6 +2,9 @@ import React from "react"
 import {Carousel, Typography} from 'antd';
 import styled from "styled-components";
 import brainLogo from "./images/brainLogo.svg";
+import video1 from "./video/video1.mp4"
+import video2 from "./video/video2.mp4"
+import video3 from "./video/video3.mp4"
 import pic8 from "./images/pic8.jpg";
 import pic9 from "./images/pic9.jpg";
 import pic10 from "./images/pic10.jpg";
@@ -40,6 +43,7 @@ class TopSlider extends React.Component {
   render() {
     return <div>
       <StyledCarousel
+        autoplay
         afterChange={this.setTransitionIn}
         beforeChange={this.setTransitionOut}
       >
@@ -47,8 +51,9 @@ class TopSlider extends React.Component {
           inProp={this.state.firstTransitionIn}
           startAnimation={this.startAnimation}
           logo={brainLogo}
-          title={"Интелектуальное распознование экспонатов sdfjlksdfjlk"}
-          description={"быстро и точно определяет экспонат и находит информацию о нем быстро и точно определяет экспонат и находит информацию о нем "}
+          title={"Интелектуальное распознование экспонатов"}
+          description={"быстро и точно определяет экспонат и находит информацию о нем"}
+          videoSrc={video1}
         />
         <SlideComponent
           inProp={this.state.firstTransitionIn}
@@ -56,6 +61,7 @@ class TopSlider extends React.Component {
           logo={brainLogo}
           title={"Интелектуальное распознование экспонатов"}
           description={"быстро и точно определяет экспонат и находит информацию о нем"}
+          videoSrc={video2}
         />
         <SlideComponent
           inProp={this.state.firstTransitionIn}
@@ -63,6 +69,7 @@ class TopSlider extends React.Component {
           logo={brainLogo}
           title={"Интелектуальное распознование экспонатов"}
           description={"быстро и точно определяет экспонат и находит информацию о нем"}
+          videoSrc={video3}
         />
         {/*<StyledImage src={pic9} alt=""/>
         <StyledImage src={pic1} alt=""/>
