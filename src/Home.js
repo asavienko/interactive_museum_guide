@@ -1,5 +1,5 @@
 import React from "react"
-import {Divider, Menu} from 'antd';
+import {Divider} from 'antd';
 import {Row, Col} from 'antd';
 import styled from "styled-components";
 
