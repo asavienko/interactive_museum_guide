@@ -11,13 +11,13 @@ padding: 10px;
 
 `;
 
-class Footer extends React.Component{
+class Footer extends React.Component {
 
   render() {
     return <div>
-<WrappFooter>
-copyright © 2019
-</WrappFooter>
+      <WrappFooter>
+        copyright © 2019
+      </WrappFooter>
     </div>
   }
 }

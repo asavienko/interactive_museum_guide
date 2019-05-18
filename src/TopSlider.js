@@ -36,7 +36,7 @@ class TopSlider extends React.Component {
   render() {
     return <div>
       <Carousel
-        autoplay
+
         afterChange={this.setTransitionIn}
         beforeChange={this.setTransitionOut}
       >
