@@ -37,7 +37,7 @@ class TopSlider extends React.Component {
 
 
   render() {
-    return <div>
+    return <div id="topslider">
       <StyledCarousel
         autoplay
         afterChange={this.setTransitionIn}

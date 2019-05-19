@@ -17,7 +17,7 @@ const MapStyle = {
 class Partners extends React.Component {
 
   render() {
-    return <div>
+    return <div id="partners">
       <Divider>Наши партнеры</Divider>
       <StyledMapContainer>
         <MapContainer style={MapStyle}/>

@@ -40,7 +40,7 @@ class Faq extends React.Component{
 
 
   render() {
-    return <div>
+    return <div id="faq">
         <Divider>FAQ</Divider>
         <WrappBoxFaq>
 
@@ -58,7 +58,7 @@ class Faq extends React.Component{
                 <CustomPanelStyle header="История посищения и понравившихся экспонатов" key="3" >
                     <p>{textThree}</p>
                 </CustomPanelStyle>
-                <CustomPanelStyle header="Где можно скачать приложение?" key="3" >
+                <CustomPanelStyle header="Где можно скачать приложение?" key="4" >
                     <p>{textFour}</p>
                 </CustomPanelStyle>
             </Collapse>

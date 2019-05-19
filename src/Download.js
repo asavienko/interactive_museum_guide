@@ -43,7 +43,7 @@ const GalleryItem = styled.img`
 class Download extends React.Component {
 
     render() {
-        return <div>
+        return <div id="download">
             <Divider>О нас</Divider>
             <BoxDescription>
                 <Row type="flex" justify="center" align="middle">

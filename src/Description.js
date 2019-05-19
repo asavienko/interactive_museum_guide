@@ -22,7 +22,7 @@ const SectionAdvantages = styled.div`
 class Description extends React.Component {
 
     render() {
-        return <div>
+        return <div id="description">
 
 
             <SectionAdvantages>
