@@ -1,5 +1,5 @@
 import React from "react"
-import {Row, Timeline} from 'antd';
+import {Carousel, Row, Timeline} from 'antd';
 import styled from "styled-components"
 import pic12 from "./images/pic12.jpg"
 
@@ -43,7 +43,6 @@ class Description extends React.Component {
                     </Timeline>
                 </Row>
             </SectionAdvantages>
-
         </div>
 
     }
