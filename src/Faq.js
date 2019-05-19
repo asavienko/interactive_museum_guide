@@ -30,7 +30,7 @@ const textFour = `
 const CustomPanelStyle = styled(Panel)`
  border-radius: 4px;
  overflow: hidden;
- margin-bottom: 24;
+ margin-bottom: 24px;
  background: #faf7eb;
 `;
 
