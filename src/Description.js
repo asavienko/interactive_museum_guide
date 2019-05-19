@@ -1,5 +1,5 @@
 import React from "react"
-import {Carousel, Row, Timeline} from 'antd';
+import {Row, Timeline} from 'antd';
 import styled from "styled-components"
 import pic12 from "./images/pic12.jpg"
 

@@ -10,7 +10,7 @@ import SlideComponent from "./SlideComponent";
 
 const StyledCarousel = styled(Carousel)`
 
-.slick-slide {
+& .slick-slide {
   overflow: hidden;
 }
 `;
