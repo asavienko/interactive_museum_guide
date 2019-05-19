@@ -24,7 +24,10 @@ const StyledCarousel = styled(Carousel)`
     margin: auto
 `;
 const StyledAvatar = styled(Avatar)`
-& img{height: 34px!important;}
+& img{
+height: 34px!important;
+object-fit: cover;
+}
 `;
 
 const reviewData = [
@@ -77,19 +80,11 @@ const reviewData = [
 ];
 
 class Reviews extends React.Component {
-    state = {
-        dotPosition: 'top',
-    };
-
-    handlePositionChange = ({target: {value: dotPosition}}) => this.setState({dotPosition});
-
-
     render() {
-        const {dotPosition} = this.state;
 
         return <div>
             <Divider>Отзывы</Divider>
-            <StyledCarousel dotPosition={dotPosition} autoplay>
+            <StyledCarousel dotPosition="top" autoplay>
                 <BoxReview>
                     <List
                         itemLayout="vertical"
