@@ -6,6 +6,18 @@ import styled from "styled-components";
 const WrapBoxAbout = styled.div`
 padding: 10px;
 `;
+const BoxDescription = styled(Col)`
+
+    font-size: 20px;
+    color: #000;
+`;
+
+const BoxDescriptionTwo = styled(Col)`
+
+`;
+const BoxBold = styled.div`
+
+`;
 
 class Home extends React.Component {
 
@@ -13,27 +25,17 @@ class Home extends React.Component {
         return <WrapBoxAbout>
             <Divider>Гид по музею</Divider>
             <Row type="flex" justify="start">
-                <Col span={12} order={1}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eligendi enim hic in ipsam iure
-                    nulla officia porro saepe vero. Accusamus aliquam aliquid aut blanditiis distinctio, expedita fuga
-                    harum ipsum, iste laborum molestias nihil perferendis porro praesentium provident quibusdam repellat
-                    sed similique sint tempore, unde veritatis vero! Eaque, esse, exercitationem!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque delectus dicta illum
-                    laudantium, magnam quod quos ratione reiciendis tempora. Amet cupiditate error iusto minus mollitia
-                    officia quis tenetur voluptatem. Blanditiis cupiditate distinctio ducimus eveniet explicabo facere
-                    fugit labore minima modi necessitatibus nemo quae quam qui quo tempore, vero voluptas.
-                </Col>
-                <Col span={12} order={2}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eveniet, explicabo illo nam nisi
-                    provident soluta voluptatibus. Adipisci animi beatae delectus dignissimos dolor eum illo itaque
-                    iusto minima natus nemo, placeat porro provident quas repudiandae rerum vero. At esse, sit!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur, consectetur deserunt
-                    dolor eligendi eos esse facere labore laudantium, libero magnam nulla odit optio pariatur
-                    perspiciatis sunt ut. Alias dolorem doloremque eos in quasi, repudiandae sit voluptates. Aliquid
-                    cupiditate nesciunt odio provident tempora! Accusamus asperiores dolore enim nisi porro. Laudantium
-                    non numquam porro quo repudiandae similique soluta. Aperiam cum fuga labore molestiae mollitia nisi
-                    repellendus sunt. Architecto quis ratione voluptas.
-                </Col>
+                <BoxDescription span={12} order={1}>
+                    <BoxBold> Все интеллектуальное должно оставаться простым  и доступным. </BoxBold>
+                    Подключите, автоматизируйте и контролируйте свой досуг таким образом - как желаете сами.
+                    Составьте порядок действий. Получайте сведения об экспонате через наш сервер, сохраняйте понравившиеся экспонаты с пометкой "избранные".
+                </BoxDescription>
+                <BoxDescriptionTwo span={12} order={2}>
+                    Процесс духовного и культурного развития для каждого из нас очень важный! Так как технологии не стоят на месте -  мы стремимся сделать вашу жизнь комфортней, доступней и интересней.
+
+                     Тяга к прекрасному есть в каждом , но бывает так , что не хватает время, информации, знаний о местоположении и графике работы замечательных выставок. Изучение произведений искусства, памятников времени в рамках современной среды  стал определяющей чертой программы.
+                     в конечном итоге превратит вас самих в художников своего времени , в художника нового типа, способного внести свой вклад в коллективное «общее произведение искусства».
+                </BoxDescriptionTwo>
             </Row>
             <div>
 

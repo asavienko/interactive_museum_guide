@@ -14,7 +14,7 @@ const StyledMapContainer = styled.div`
 const WrappPartnersBox = styled.div`
      
 `;
-let MapStyle = {
+const MapStyle = {
     position: `relative !important`,
     width: `97% !important`,
     height: `24vw`,
@@ -34,6 +34,7 @@ class Partners extends React.Component {
             <StyledMapContainer>
                 <MapContainer style={MapStyle}/>
             </StyledMapContainer>
+
         </WrappPartnersBox>
     }
 }

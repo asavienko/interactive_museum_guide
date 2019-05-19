@@ -34,12 +34,11 @@ class Description extends React.Component {
                         <Timeline.Item>Эксклюзивность</Timeline.Item>
                         <Timeline.Item>Экономия времени</Timeline.Item>
                         <Timeline.Item>Возможность самостоятельно узнавать всю информацию</Timeline.Item>
-                        <Timeline.Item>вы сможете выставить для себя приоритеты по программе
+                        <Timeline.Item>Вы сможете выставить для себя приоритеты по программе
                             достопримечательностей</Timeline.Item>
                         <Timeline.Item>Возможность скачать аудиокнигу, изображения, узнать новости
-                            искустваа</Timeline.Item>
-                        <Timeline.Item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-                            quo.</Timeline.Item>
+                            искуства</Timeline.Item>
+                        <Timeline.Item>Возможность запоминать понравившиеся места</Timeline.Item>
 
                     </Timeline>
                 </Row>

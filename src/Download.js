@@ -9,6 +9,11 @@ margin: 15px;
 const BoxButton = styled.div`
 margin: 15px  0;
 `;
+const BoxInformationOne = styled(Col)`
+
+`;
+
+
 
 class Download extends React.Component {
 
@@ -17,26 +22,11 @@ class Download extends React.Component {
             <Divider>О нас</Divider>
             <BoxDescription>
                 <Row type="flex" justify="center" align="middle">
-                    <Col span={12} order={1}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
-                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
-                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
-                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
-                        dignissimos fugiat illum porro quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                        accusantium
-                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
-                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
-                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
-                        dignissimos fugiat illum porro quam.</Col>
-                    <Col span={12} order={2}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
-                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
-                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
-                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
-                        dignissimos fugiat illum porro quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                        accusantium
-                        adipisci alias animi aperiam commodi consequuntur corporis delectus doloremque esse iure labore
-                        laboriosam magnam maxime, mollitia necessitatibus nesciunt non nulla officiis omnis perspiciatis
-                        placeat possimus quaerat quam quod rerum sunt tempore totam vero voluptatibus. Adipisci
-                        dignissimos fugiat illum porro quam.</Col>
+                    <BoxInformationOne span={12} order={1}>Перспективы в искусстве и истории искусства, от классического искусства до
+                        современной архитектуры.</BoxInformationOne>
+                    <Col span={12} order={2}>Статьи обновляются учеными, педагогами, специалистами по цифровым технологиям,
+                        приглашенными докладчиками, стажерами и многими другими. с целью объединения оцифрованных версий историко-художественных материалов,
+                        разбросанных по разным веб-сайтам, для облегчения их поиска.</Col>
                 </Row>
             </BoxDescription>
             <BoxButton>
@@ -46,6 +36,21 @@ class Download extends React.Component {
                     </Button>
                 </Row>
             </BoxButton>
+
+            <div>
+                <div><img src="" alt=""/>
+                    <p></p>
+                </div>
+                <div><img src="" alt=""/>
+                    <p></p>
+                </div>
+                <div><img src="" alt=""/>
+                    <p></p>
+                </div>
+
+            </div>
+
+
         </div>
     }
 }
