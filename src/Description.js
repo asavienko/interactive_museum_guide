@@ -43,7 +43,6 @@ class Description extends React.Component {
                     </Timeline>
                 </Row>
             </SectionAdvantages>
-
         </div>
 
     }
