@@ -6,7 +6,8 @@ import video1 from "./video/video1.mp4"
 import video2 from "./video/video2.mp4"
 import video3 from "./video/video3.mp4"
 import SlideComponent from "./SlideComponent";
-
+import image123 from "./images/previwe/image123.png";
+import image345 from "./images/previwe/image345.png";
 
 const StyledCarousel = styled(Carousel)`
 
@@ -53,17 +54,17 @@ class TopSlider extends React.Component {
         <SlideComponent
           inProp={this.state.firstTransitionIn}
           startAnimation={this.startAnimation}
-          logo={brainLogo}
-          title={"Интелектуальное распознование экспонатов"}
-          description={"быстро и точно определяет экспонат и находит информацию о нем"}
+          logo={image123}
+          title={"Все интеллектуальное должно оставаться простым и доступным"}
+          description={"легкость, информативность"}
           videoSrc={video2}
         />
         <SlideComponent
           inProp={this.state.firstTransitionIn}
           startAnimation={this.startAnimation}
-          logo={brainLogo}
-          title={"Интелектуальное распознование экспонатов"}
-          description={"быстро и точно определяет экспонат и находит информацию о нем"}
+          logo={image345}
+          title={"Выдающиеся произведения искусства и рассказ историй"}
+          description={"Это дает захватывающий взгляд на процесс самообразования и культурного развития"}
           videoSrc={video3}
         />
       </StyledCarousel>

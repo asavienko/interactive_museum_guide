@@ -25,6 +25,7 @@ const StyledLogoImage = styled.img`
     width: 9rem;
     height: 9rem;
     opacity: 0.94;
+    object-fit: cover;
 `;
 const StyledTitle = styled(Title)`
 color: white!important;
