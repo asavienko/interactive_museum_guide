@@ -23,9 +23,10 @@ order: -1
 `;
 
 class TopMenu extends React.Component {
+
   render() {
-    return <MenuWrapper>
-      <StyledMenu mode="horizontal" theme="dark">
+    return <MenuWrapper onScroll = {this.handleScroll}>
+      <StyledMenu mode="horizontal" theme="dark" show={this.state}>
         <StyledLogo src={logo}/>
         <Menu.Item key={1}><AnchorLink href={"#topslider"}>Гид по музею</AnchorLink></Menu.Item>
         <Menu.Item key={2}><AnchorLink href={"#description"}>Описание</AnchorLink></Menu.Item>
