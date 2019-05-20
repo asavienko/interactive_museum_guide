@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components";
 import {Divider, Collapse, Icon} from "antd";
 
- const WrappBoxFaq = styled.div`
- background: '#faf7eb',
-    borderRadius: 4,
-    marginBottom: 24,
-    border: 0,
-    overflow: 'hidden',
+ const StyledBoxFaq = styled.div`
+    background: #faf7eb;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    border: 0;
+    overflow: hidden;
 `;
 
 const Panel = Collapse.Panel;
@@ -42,7 +42,7 @@ class Faq extends React.Component{
   render() {
     return <div id="faq">
         <Divider>FAQ</Divider>
-        <WrappBoxFaq>
+        <StyledBoxFaq>
 
             <Collapse
                 bordered={true}
@@ -62,7 +62,7 @@ class Faq extends React.Component{
                     <p>{textFour}</p>
                 </CustomPanelStyle>
             </Collapse>
-        </WrappBoxFaq>
+        </StyledBoxFaq>
     </div>
   }
 }
