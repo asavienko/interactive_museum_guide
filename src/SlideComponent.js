@@ -13,7 +13,8 @@ const StyledBackground = styled.video`
 const StyledImageOverlay = styled.div`
   width:100%;
   height: 100vh;
-  background: rgba(0,0,0, 0.5);
+  background: #001529;
+  opacity: 0.5;
   position: absolute;
 `;
 const StyledSlide = styled.div`

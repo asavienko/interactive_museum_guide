@@ -1,5 +1,5 @@
 import React from "react"
-import {Row, Timeline} from 'antd';
+import {Divider, Row, Timeline} from 'antd';
 import styled from "styled-components"
 import pic12 from "./images/pic12.jpg"
 
@@ -12,40 +12,59 @@ const Advantages = styled.div`
 `;
 
 const SectionAdvantages = styled.div`
-    background-image: url(${pic12});
+
+    background-image: linear-gradient(0deg,rgba(0,21,45,0.6),rgba(0,21,45,0.6)),url(${pic12});
     background-repeat: no-repeat;
     background-size: cover;
-        padding-top: 30px;
+    padding-top: 30px;
 `;
-
+const StyledDivider = styled(Divider)`
+ & span {
+ color: rgba(255,255,255, 0.7);
+ }
+`;
+const StyledItem = styled(Timeline.Item)`
+& .ant-timeline-item-content {
+ color: rgba(255,255,255, 0.7);
+}
+`;
 
 class Description extends React.Component {
 
-    render() {
-        return <div id="description">
+  render() {
+    return <div id="description">
+      <SectionAdvantages>
+        <Advantages>
+          <StyledDivider>Наши преимущества</StyledDivider>
+        </Advantages>
+        <Row type="flex" justify="center" align="middle">
+          <Timeline>
+            <StyledItem>
+              Эксклюзивность
+            </StyledItem>
+            <StyledItem>
+              Экономия времени
+            </StyledItem>
+            <StyledItem>
+              Возможность самостоятельно узнавать всю информацию
+            </StyledItem>
+            <StyledItem>
+              Вы сможете выставить для себя приоритеты по программе
+              достопримечательностей
+            </StyledItem>
+            <StyledItem>
+              Возможность скачать аудиокнигу, изображения, узнать новости
+              искуства
+            </StyledItem>
+            <StyledItem>
+              Возможность запоминать понравившиеся места
+            </StyledItem>
+          </Timeline>
+        </Row>
+      </SectionAdvantages>
+    </div>
 
-
-            <SectionAdvantages>
-                <Advantages>
-                    <p>Наши преимущества</p>
-                </Advantages>
-                <Row type="flex" justify="center" align="middle">
-                    <Timeline>
-                        <Timeline.Item>Эксклюзивность</Timeline.Item>
-                        <Timeline.Item>Экономия времени</Timeline.Item>
-                        <Timeline.Item>Возможность самостоятельно узнавать всю информацию</Timeline.Item>
-                        <Timeline.Item>Вы сможете выставить для себя приоритеты по программе
-                            достопримечательностей</Timeline.Item>
-                        <Timeline.Item>Возможность скачать аудиокнигу, изображения, узнать новости
-                            искуства</Timeline.Item>
-                        <Timeline.Item>Возможность запоминать понравившиеся места</Timeline.Item>
-
-                    </Timeline>
-                </Row>
-            </SectionAdvantages>
-        </div>
-
-    }
+  }
 }
 
 export default Description
