@@ -1,18 +1,17 @@
 import React from "react"
 import styled from "styled-components";
-import {Col, Divider, Row} from "antd";
-import {Button, Radio, Icon} from 'antd';
-import picture1 from './images/previwe/picture1.jpg';
-import picture2 from './images/previwe/picture2.jpg';
-import picture3 from './images/previwe/picture3.jpg';
-import picture4 from './images/previwe/picture4.jpg';
-import picture5 from './images/previwe/picture5.jpg';
+import {Button, Col, Divider, Row} from "antd";
+import picture1 from './images/preview/picture1.jpg';
+import picture2 from './images/preview/picture2.jpg';
+import picture3 from './images/preview/picture3.jpg';
+import picture4 from './images/preview/picture4.jpg';
+import picture5 from './images/preview/picture5.jpg';
 
-import picture6 from './images/previwe/picture6.jpg';
-import picture7 from './images/previwe/picture7.jpg';
-import picture8 from './images/previwe/picture8.jpg';
-import picture9 from './images/previwe/picture9.jpg';
-import picture10 from './images/previwe/picture10.jpg';
+import picture6 from './images/preview/picture6.jpg';
+import picture7 from './images/preview/picture7.jpg';
+import picture8 from './images/preview/picture8.jpg';
+import picture9 from './images/preview/picture9.jpg';
+import picture10 from './images/preview/picture10.jpg';
 
 
 const BoxDescription = styled.div`
@@ -78,7 +77,6 @@ class Download extends React.Component {
                 <div><GalleryItem src={picture5} alt=""/>
                 <p></p>
             </div>
-
                 <div><GalleryItem src={picture6} alt=""/>
                     <p></p>
                 </div>
