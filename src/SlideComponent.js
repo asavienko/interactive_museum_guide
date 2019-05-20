@@ -25,6 +25,7 @@ height: 100vh;
 const StyledLogoImage = styled.img`
     width: 9rem;
     height: 9rem;
+    margin-right: 1rem;
     opacity: 0.94;
     object-fit: cover;
 `;
