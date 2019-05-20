@@ -6,8 +6,8 @@ import video1 from "./video/video1.mp4"
 import video2 from "./video/video2.mp4"
 import video3 from "./video/video3.mp4"
 import SlideComponent from "./SlideComponent";
-import image123 from "./images/previwe/image123.png";
-import image345 from "./images/previwe/image345.png";
+import image123 from "./images/preview/image123.png";
+import image345 from "./images/preview/image345.png";
 
 const StyledCarousel = styled(Carousel)`
 
