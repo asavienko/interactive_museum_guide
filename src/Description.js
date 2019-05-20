@@ -29,42 +29,38 @@ const StyledItem = styled(Timeline.Item)`
 }
 `;
 
-class Description extends React.Component {
-
-  render() {
-    return <div id="description">
-      <SectionAdvantages>
-        <Advantages>
-          <StyledDivider>Наши преимущества</StyledDivider>
-        </Advantages>
-        <Row type="flex" justify="center" align="middle">
-          <Timeline>
-            <StyledItem>
-              Эксклюзивность
-            </StyledItem>
-            <StyledItem>
-              Экономия времени
-            </StyledItem>
-            <StyledItem>
-              Возможность самостоятельно узнавать всю информацию
-            </StyledItem>
-            <StyledItem>
-              Вы сможете выставить для себя приоритеты по программе
-              достопримечательностей
-            </StyledItem>
-            <StyledItem>
-              Возможность скачать аудиокнигу, изображения, узнать новости
-              искуства
-            </StyledItem>
-            <StyledItem>
-              Возможность запоминать понравившиеся места
-            </StyledItem>
-          </Timeline>
-        </Row>
-      </SectionAdvantages>
-    </div>
-
-  }
+function Description() {
+  return <div id="description">
+    <SectionAdvantages>
+      <Advantages>
+        <StyledDivider>Наши преимущества</StyledDivider>
+      </Advantages>
+      <Row type="flex" justify="center" align="middle">
+        <Timeline>
+          <StyledItem>
+            Эксклюзивность
+          </StyledItem>
+          <StyledItem>
+            Экономия времени
+          </StyledItem>
+          <StyledItem>
+            Возможность самостоятельно узнавать всю информацию
+          </StyledItem>
+          <StyledItem>
+            Вы сможете выставить для себя приоритеты по программе
+            достопримечательностей
+          </StyledItem>
+          <StyledItem>
+            Возможность скачать аудиокнигу, изображения, узнать новости
+            искуства
+          </StyledItem>
+          <StyledItem>
+            Возможность запоминать понравившиеся места
+          </StyledItem>
+        </Timeline>
+      </Row>
+    </SectionAdvantages>
+  </div>
 }
 
 export default Description
