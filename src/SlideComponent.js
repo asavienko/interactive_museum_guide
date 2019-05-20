@@ -1,4 +1,3 @@
-import pic8 from "./images/pic8.jpg";
 import {Typography} from "antd";
 import React from "react";
 import styled from "styled-components";
@@ -13,13 +12,15 @@ const StyledBackground = styled.video`
 `;
 const StyledImageOverlay = styled.div`
   width:100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(0,0,0, 0.5);
   position: absolute;
 `;
 const StyledSlide = styled.div`
 overflow: hidden;
 position: relative;
+height: 100vh;
+
 `;
 const StyledLogoImage = styled.img`
     width: 9rem;
@@ -88,7 +89,7 @@ class SlideComponent extends React.Component {
     super(props);
     this.state = {
       secondTransitionIn: false,
-    }
+    };
   }
 
 
@@ -147,6 +148,7 @@ class SlideComponent extends React.Component {
         loop
         autoPlay
         src={videoSrc}
+        ref={this.refToStyledVideo}
       />
     </StyledSlide>
   }
