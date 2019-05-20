@@ -20,12 +20,12 @@ const SectionAdvantages = styled.div`
 `;
 const StyledDivider = styled(Divider)`
  & span {
- color: rgba(255,255,255, 0.7);
+ color: rgba(255,255,255, 0.8);
  }
 `;
 const StyledItem = styled(Timeline.Item)`
 & .ant-timeline-item-content {
- color: rgba(255,255,255, 0.7);
+ color: rgba(255,255,255, 0.85);
 }
 `;
 
