@@ -9,7 +9,16 @@ height: 40px;
 width: 40px;
 order: -1;
 `;
-
+const HoverComponent = styled.div`
+ position: fixed;
+ height: 46px;
+ left: 0;
+ right: 0;
+ top: 0;
+ z-index: 30;
+ 
+`;
+const animationDuration = "0.4s";
 const StyledMenu = styled(Menu)`
     display: flex;
     justify-content: space-around;
@@ -18,16 +27,21 @@ const StyledMenu = styled(Menu)`
     z-index: 10;
     left: 0;
     right: 0;
-    
+  ${HoverComponent}:hover &{
+    top: 0;
+    transition: ${animationDuration};
+  }
   ${prop => prop.isVisible} && {
     top: -50px;
-    transition: 0.5s;
+    transition: ${animationDuration};
   } ;
   ${prop => !prop.isVisible} && {
     top: 0;
-    transition: 0.5s;
+    transition: ${animationDuration};
   };
+
 `;
+
 
 class TopMenu extends React.Component {
   constructor(props) {
@@ -57,18 +71,20 @@ class TopMenu extends React.Component {
   };
 
   render() {
-    return <StyledMenu
-      mode="horizontal"
-      theme="dark"
-      isVisible={this.state.isVisible}
-    >
-      <StyledLogo src={logo}/>
-      <Menu.Item key={1}><AnchorLink href={"#topslider"}>Гид по музею</AnchorLink></Menu.Item>
-      <Menu.Item key={2}><AnchorLink href={"#description"}>Описание</AnchorLink></Menu.Item>
-      <Menu.Item key={3}><AnchorLink href={"#download"}>Скачать</AnchorLink></Menu.Item>
-      <Menu.Item key={4}><AnchorLink href={"#faq"}>FAQ</AnchorLink></Menu.Item>
-      <Menu.Item key={5}><AnchorLink href={"#partners"}>Наши партнёры</AnchorLink></Menu.Item>
-    </StyledMenu>
+    return <HoverComponent>
+      <StyledMenu
+        mode="horizontal"
+        theme="dark"
+        isVisible={this.state.isVisible}
+      >
+        <StyledLogo src={logo}/>
+        <Menu.Item key={1}><AnchorLink href={"#topslider"}>Гид по музею</AnchorLink></Menu.Item>
+        <Menu.Item key={2}><AnchorLink href={"#description"}>Описание</AnchorLink></Menu.Item>
+        <Menu.Item key={3}><AnchorLink href={"#download"}>Скачать</AnchorLink></Menu.Item>
+        <Menu.Item key={4}><AnchorLink href={"#faq"}>FAQ</AnchorLink></Menu.Item>
+        <Menu.Item key={5}><AnchorLink href={"#partners"}>Наши партнёры</AnchorLink></Menu.Item>
+      </StyledMenu>
+    </HoverComponent>
   }
 }
 
