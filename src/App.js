@@ -14,19 +14,14 @@ const StyledApp = styled.div`
   font-smoothing: grayscale;
 `;
 
-class App extends React.Component {
-  handleScroll = (e) => {
-   console.log( e.target.scroll)
-  };
-  render() {
+function App(){
     return (
-      <StyledApp >
-        <TopMenu/>
-        <MainContent/>
-        <Footer/>
+      <StyledApp>
+          <TopMenu/>
+          <MainContent/>
+          <Footer/>
       </StyledApp>
     )
-  }
 }
 
 export default App;
