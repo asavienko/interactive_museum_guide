@@ -7,22 +7,21 @@ import 'antd/dist/antd.css';
 
 const StyledApp = styled.div`
   min-width: 480px;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-smoothing: antialiased;
   font-smoothing: grayscale;
-`
+`;
 
-function App() {
-  return (
-    <StyledApp>
-      <TopMenu/>
-      <MainContent/>
-      <Footer/>
-    </StyledApp>
-  );
+function App(){
+    return (
+      <StyledApp>
+          <TopMenu/>
+          <MainContent/>
+          <Footer/>
+      </StyledApp>
+    )
 }
 
 export default App;
