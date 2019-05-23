@@ -70,7 +70,7 @@ class TopMenu extends React.Component {
     });
   };
 
-  render() {
+render() {
     return <HoverComponent>
       <StyledMenu
         mode="horizontal"
