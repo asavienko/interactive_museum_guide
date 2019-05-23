@@ -1,6 +1,5 @@
 import React from "react"
 import {Menu} from "antd";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import logo from "./images/logo.svg"
 
@@ -18,15 +17,14 @@ const StyledMenu = styled(Menu)`
     right: 0;
 `;
 
-
 function TopMenu() {
   return <StyledMenu mode="horizontal" theme="dark">
     <StyledLogo src={logo}/>
-    <Menu.Item key={1}><AnchorLink href={"#topslider"}>Гид по музею</AnchorLink></Menu.Item>
-    <Menu.Item key={2}><AnchorLink href={"#description"}>Описание</AnchorLink></Menu.Item>
-    <Menu.Item key={3}><AnchorLink href={"#download"}>Скачать</AnchorLink></Menu.Item>
-    <Menu.Item key={4}><AnchorLink href={"#faq"}>FAQ</AnchorLink></Menu.Item>
-    <Menu.Item key={5}><AnchorLink href={"#partners"}>Наши партнёры</AnchorLink></Menu.Item>
+    <Menu.Item key={1}>Гид по музею</Menu.Item>
+    <Menu.Item key={2}>Описание</Menu.Item>
+    <Menu.Item key={3}>Скачать</Menu.Item>
+    <Menu.Item key={4}>FAQ</Menu.Item>
+    <Menu.Item key={5}>Наши партнёры</Menu.Item>
   </StyledMenu>
 }
 
