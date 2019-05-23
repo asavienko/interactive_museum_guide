@@ -10,7 +10,6 @@ import image123 from "./images/preview/image123.png";
 import image345 from "./images/preview/image345.png";
 
 const StyledCarousel = styled(Carousel)`
-
 & .slick-slide {
   overflow: hidden;
 }

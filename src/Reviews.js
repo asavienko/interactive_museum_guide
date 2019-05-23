@@ -1,5 +1,5 @@
 import React from "react"
-import {Divider, Carousel, List, Avatar, Rate} from 'antd';
+import {Avatar, Divider, List, Rate} from 'antd';
 import styled from "styled-components";
 import avatar1 from "./images/avatars/avatar1.jpg"
 import avatar2 from "./images/avatars/avatar2.jpg"
@@ -13,10 +13,6 @@ display: flex !important;
 justify-content: center;
 width:95vw !important;
 margin: 20px;
-`;
-const StyledCarousel = styled(Carousel)`
-    width: 95vw;
-    margin: auto
 `;
 const StyledAvatar = styled(Avatar)`
 & img{
@@ -74,8 +70,7 @@ const reviewData = [
   },
 ];
 
-class Reviews extends React.Component {
-  render() {
+function Reviews() {
     return <div>
       <Divider>Отзывы</Divider>
       <BoxReview>
@@ -95,7 +90,6 @@ class Reviews extends React.Component {
         />
       </BoxReview>
     </div>
-  }
 }
 
 export default Reviews

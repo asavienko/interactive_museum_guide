@@ -5,7 +5,7 @@ import {Transition} from "react-transition-group";
 
 const {Title, Text} = Typography;
 
-const blockHeight = "calc(100vh - 46px)"
+const blockHeight = "calc(100vh - 46px)";
 
 const StyledBackground = styled.video` 
   width:100%;
@@ -152,7 +152,6 @@ class SlideComponent extends React.Component {
         loop
         autoPlay
         src={videoSrc}
-        ref={this.refToStyledVideo}
       />
     </StyledSlide>
   }

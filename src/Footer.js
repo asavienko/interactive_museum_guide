@@ -11,13 +11,10 @@ padding: 10px;
 
 `;
 
-class Footer extends React.Component {
-
-  render() {
-    return       <WrapperFooter>
-        copyright © 2019
-      </WrapperFooter>
-  }
+function Footer() {
+  return <WrapperFooter>
+    copyright © 2019
+  </WrapperFooter>
 }
 
 export default Footer

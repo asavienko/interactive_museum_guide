@@ -12,7 +12,7 @@ import Footer from "./Footer";
 const StyledWrapper = styled.div`
   max-height: calc(100vh - 46px);
   overflow-y: auto;
-  margin-top: 46px;
+  min-width: 480px;
 `;
 
 class MainContent extends React.Component {

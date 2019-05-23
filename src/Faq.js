@@ -3,8 +3,6 @@ import styled from "styled-components";
 import {Divider, Collapse, Icon} from "antd";
 
 
-
-
 const textOne = `
   Приложение поддерживают все современные устройства,  Mac/ПК , Android, iPhone, Windows Phone.
   чтоб установить расширение перейдите по ссылке указанной выше. Ресурс адаптированный под мобильные устройства веб-сайт, который будет работать через мобильный браузер. 
@@ -25,32 +23,31 @@ const StyledBoxFaq = styled.div`
 `;
 
 
-function Faq(){
-
+function Faq() {
   const Panel = Collapse.Panel;
-    return <div id="faq">
-        <Divider>FAQ</Divider>
-        <StyledBoxFaq>
-            <Collapse
-                bordered={true}
-                defaultActiveKey={['1']}
-                expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
-            >
-                <Panel header="Какие устройста поддерживают приложение? " key="1" >
-                    <p>{textOne}</p>
-                </Panel>
-                <Panel header="Использование MuseumGuide на мобильных" key="2" >
-                    <p>{textTwo}</p>
-                </Panel>
-                <Panel header="История посищения и понравившихся экспонатов" key="3" >
-                    <p>{textThree}</p>
-                </Panel>
-                <Panel header="Где можно скачать приложение?" key="4" >
-                    <p>{textFour}</p>
-                </Panel>
-            </Collapse>
-        </StyledBoxFaq>
-    </div>
-  }
+  return <div id="faq">
+    <Divider>FAQ</Divider>
+    <StyledBoxFaq>
+      <Collapse
+        bordered={true}
+        defaultActiveKey={['1']}
+        expandIcon={({isActive}) => <Icon type="caret-right" rotate={isActive ? 90 : 0}/>}
+      >
+        <Panel header="Какие устройста поддерживают приложение? " key="1">
+          <p>{textOne}</p>
+        </Panel>
+        <Panel header="Использование MuseumGuide на мобильных" key="2">
+          <p>{textTwo}</p>
+        </Panel>
+        <Panel header="История посищения и понравившихся экспонатов" key="3">
+          <p>{textThree}</p>
+        </Panel>
+        <Panel header="Где можно скачать приложение?" key="4">
+          <p>{textFour}</p>
+        </Panel>
+      </Collapse>
+    </StyledBoxFaq>
+  </div>
+}
 
 export default Faq
