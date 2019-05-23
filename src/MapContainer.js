@@ -15,8 +15,8 @@ export class MapContainer extends React.Component {
         lng: 36.231091
       }, radius: 4000,
     };
-    const infoWindowProperties ={
-      pixelOffset: new google.maps.Size(-24,0)
+    const infoWindowProperties = {
+      pixelOffset: new google.maps.Size(-24, 0)
     };
 
     const service = new google.maps.places.PlacesService(map);
@@ -46,11 +46,9 @@ export class MapContainer extends React.Component {
         infowindow.setContent(place.name);
         infowindow.open(map, this);
       });
-
     };
-
-
   };
+
   render() {
     return (
       <Map
@@ -64,7 +62,12 @@ export class MapContainer extends React.Component {
         mapTypeControl={false}
         streetViewControl={false}
         fullscreenControl={false}
-        {...this.props}
+        style={{
+          width: '90%',
+          height: '90%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
       />
 
     );

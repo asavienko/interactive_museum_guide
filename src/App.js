@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from "./Footer";
 import TopMenu from "./TopMenu";
 import MainContent from "./MainContent";
 import styled from "styled-components";
 import 'antd/dist/antd.css';
+import "./index.css"
 
 const StyledApp = styled.div`
   min-width: 480px;
@@ -19,7 +19,6 @@ function App(){
       <StyledApp>
           <TopMenu/>
           <MainContent/>
-          <Footer/>
       </StyledApp>
     )
 }
