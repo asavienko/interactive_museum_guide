@@ -4,6 +4,7 @@ import MapContainer from "./MapContainer";
 import styled from "styled-components";
 
 const StyledMapContainer = styled.div`
+position: relative;
     height: 90vh;
 `;
 

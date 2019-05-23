@@ -6,12 +6,19 @@ import Reviews from "./Reviews";
 import Faq from "./Faq";
 import Partners from "./Partners";
 import TopSlider from "./TopSlider";
+import styled from "styled-components";
+import Footer from "./Footer";
 
+const StyledWrapper = styled.div`
+  max-height: calc(100vh - 46px);
+  overflow-y: auto;
+  margin-top: 46px;
+`;
 
 class MainContent extends React.Component {
 
   render() {
-    return <div>
+    return <StyledWrapper>
       <TopSlider/>
       <Home/>
       <Description/>
@@ -19,7 +26,8 @@ class MainContent extends React.Component {
       <Partners/>
       <Reviews/>
       <Faq/>
-    </div>
+      <Footer/>
+    </StyledWrapper>
   }
 }
 
