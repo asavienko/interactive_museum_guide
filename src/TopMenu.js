@@ -4,7 +4,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import logo from "./images/logo.svg"
 
-
 const StyledLogo = styled.img`
 height: 40px;
 width: 40px;
@@ -71,8 +70,7 @@ class TopMenu extends React.Component {
     });
   };
 
-class TopMenu extends React.Component {
-  render() {
+render() {
     return <HoverComponent>
       <StyledMenu
         mode="horizontal"
