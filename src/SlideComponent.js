@@ -5,14 +5,16 @@ import {Transition} from "react-transition-group";
 
 const {Title, Text} = Typography;
 
+const blockHeight = "calc(100vh - 46px)"
+
 const StyledBackground = styled.video` 
   width:100%;
-  height: 100vh;
+  height: ${blockHeight};
   object-fit: cover;
 `;
 const StyledImageOverlay = styled.div`
   width:100%;
-  height: 100vh;
+  height: ${blockHeight};
   background: #001529;
   opacity: 0.5;
   position: absolute;
@@ -20,7 +22,7 @@ const StyledImageOverlay = styled.div`
 const StyledSlide = styled.div`
 overflow: hidden;
 position: relative;
-height: 100vh;
+height: ${blockHeight};
 
 `;
 const StyledLogoImage = styled.img`
