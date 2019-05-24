@@ -41,6 +41,7 @@ class TopSlider extends React.Component {
         autoplay
         afterChange={this.setTransitionIn}
         beforeChange={this.setTransitionOut}
+        pauseOnHover={false}
       >
         <SlideComponent
           inProp={this.state.firstTransitionIn}
