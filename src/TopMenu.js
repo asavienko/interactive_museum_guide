@@ -36,11 +36,4 @@ class TopMenu extends React.Component {
   }
 }
 
-//
-// <AnchorLink href={"#topslider"}>Гид по музею</AnchorLink></Menu.Item>
-// <Menu.Item key={2}><AnchorLink href={"#description"}>Описание</AnchorLink></Menu.Item>
-// <Menu.Item key={3}><AnchorLink href={"#download"}>Скачать</AnchorLink></Menu.Item>
-// <Menu.Item key={4}><AnchorLink href={"#faq"}>FAQ</AnchorLink></Menu.Item>
-// <Menu.Item key={5}><AnchorLink href={"#partners"}>
-
 export default TopMenu
