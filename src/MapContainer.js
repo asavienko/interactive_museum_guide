@@ -68,6 +68,7 @@ export class MapContainer extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
         }}
+        gestureHandling={"cooperative"}
       />
 
     );
