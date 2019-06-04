@@ -1,10 +1,7 @@
-import React from "react"
-import {Divider} from "antd";
+import React from "react";
+import { Divider } from "antd";
 
 function AddMuseum() {
-
-  return (
-    <Divider>Добвьте свой музей</Divider>
-  )
+  return <Divider>Добвьте свой музей</Divider>;
 }
-export default AddMuseum
+export default AddMuseum;

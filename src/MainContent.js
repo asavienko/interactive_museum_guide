@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Home from "./Home";
 import Description from "./Description";
 import Download from "./Download";
@@ -15,19 +15,20 @@ const StyledWrapper = styled.div`
 `;
 
 class MainContent extends React.Component {
-
   render() {
-    return <StyledWrapper>
-      <TopSlider/>
-      <Home/>
-      <Description/>
-      <Download/>
-      <Partners/>
-      <Reviews/>
-      <Faq/>
-      <Footer/>
-    </StyledWrapper>
+    return (
+      <StyledWrapper>
+        <TopSlider />
+        <Home />
+        <Description />
+        <Download />
+        <Partners />
+        <Reviews />
+        <Faq />
+        <Footer />
+      </StyledWrapper>
+    );
   }
 }
 
-export default MainContent
+export default MainContent;

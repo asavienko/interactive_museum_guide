@@ -1,75 +1,80 @@
-import React from "react"
-import {Divider, Row, Timeline} from 'antd';
-import styled from "styled-components"
-import pic12 from "./images/pic12.jpg"
+import React from "react";
+import { Divider, Row, Timeline } from "antd";
+import styled from "styled-components";
+import pic12 from "./images/pic12.jpg";
 
 const Advantages = styled.div`
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    :hover { color: #1890ff;}
+  text-align: center;
+  font-size: 20px; //todo move from px to vw;
+  font-weight: bold;
+  color: #fff;
+  :hover {
+    color: #1890ff;
+  }
 `;
 
 const SectionAdvantages = styled.div`
-
-    background-image: linear-gradient(0deg,rgba(0,21,45,0.6),rgba(0,21,45,0.6)),url(${pic12});
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 30px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 21, 45, 0.6),
+      rgba(0, 21, 45, 0.6)
+    ),
+    url(${pic12});
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
 `;
 const StyledDivider = styled(Divider)`
- & span {
- color: rgba(255,255,255, 0.8);
- }
+  & span {
+    color: rgba(255, 255, 255, 0.8);
+  }
 `;
 const StyledItem = styled(Timeline.Item)`
-& .ant-timeline-item-content {
- color: rgba(255,255,255, 0.85);
-}
+  & .ant-timeline-item-content {
+    color: rgba(255, 255, 255, 0.85);
+  }
 `;
 
 class Description extends React.Component {
   componentDidMount() {
-    if(window.location.hash === "description");{
+    if (window.location.hash === "description");
+    {
       const description = document.getElementById("description");
-      description.scrollIntoView({behavior:"smooth"})
+      description.scrollIntoView({ behavior: "smooth" });
     }
   }
 
   render() {
-    return <div id="description">
-    <SectionAdvantages>
-      <Advantages>
-        <StyledDivider>Наши преимущества</StyledDivider>
-      </Advantages>
-      <Row type="flex" justify="center" align="middle">
-        <Timeline>
-          <StyledItem>
-            Эксклюзивность
-          </StyledItem>
-          <StyledItem>
-            Экономия времени
-          </StyledItem>
-          <StyledItem>
-            Возможность самостоятельно узнавать всю информацию
-          </StyledItem>
-          <StyledItem>
-            Вы сможете выставить для себя приоритеты по программе
-            достопримечательностей
-          </StyledItem>
-          <StyledItem>
-            Возможность скачать аудиокнигу, изображения, узнать новости
-            искуства
-          </StyledItem>
-          <StyledItem>
-            Возможность запоминать понравившиеся места
-          </StyledItem>
-        </Timeline>
-      </Row>
-    </SectionAdvantages>
-  </div>
-}
+    return (
+      <div id="description">
+        <SectionAdvantages>
+          <Advantages>
+            <StyledDivider>Наши преимущества</StyledDivider>
+          </Advantages>
+          <Row type="flex" justify="center" align="middle">
+            <Timeline>
+              <StyledItem>Эксклюзивность</StyledItem>
+              <StyledItem>Экономия времени</StyledItem>
+              <StyledItem>
+                Возможность самостоятельно узнавать всю информацию
+              </StyledItem>
+              <StyledItem>
+                Вы сможете выставить для себя приоритеты по программе
+                достопримечательностей
+              </StyledItem>
+              <StyledItem>
+                Возможность скачать аудиокнигу, изображения, узнать новости
+                искуства
+              </StyledItem>
+              <StyledItem>
+                Возможность запоминать понравившиеся места
+              </StyledItem>
+            </Timeline>
+          </Row>
+        </SectionAdvantages>
+      </div>
+    );
+  }
 }
 
-export default Description
+export default Description;
