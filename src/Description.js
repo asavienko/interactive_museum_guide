@@ -29,8 +29,16 @@ const StyledItem = styled(Timeline.Item)`
 }
 `;
 
-function Description() {
-  return <div id="description">
+class Description extends React.Component {
+  componentDidMount() {
+    if(window.location.hash === "description");{
+      const description = document.getElementById("description");
+      description.scrollIntoView({behavior:"smooth"})
+    }
+  }
+
+  render() {
+    return <div id="description">
     <SectionAdvantages>
       <Advantages>
         <StyledDivider>Наши преимущества</StyledDivider>
@@ -61,6 +69,7 @@ function Description() {
       </Row>
     </SectionAdvantages>
   </div>
+}
 }
 
 export default Description

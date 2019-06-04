@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import {Button, Col, Divider, Row} from "antd";
 import picture1 from './images/preview/picture1.jpg';
@@ -48,9 +49,11 @@ function Download() {
     </BoxDescription>
     <BoxButton>
       <Row type="flex" justify="center" align="middle">
-        <Button type="primary" icon="download" size='large'>
-          Скачать
+        <Link to="/download">
+          <Button type="primary" icon="download" size='large'>
+            Скачать
         </Button>
+        </Link>
       </Row>
     </BoxButton>
 
