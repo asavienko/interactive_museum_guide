@@ -1,7 +1,7 @@
 import React from "react";
-import { Menu } from "antd";
+import { Menu } from "antd/lib/index";
 import styled from "styled-components";
-import logo from "./images/logo.svg";
+import logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 
 const StyledLogo = styled.img`
@@ -28,23 +28,20 @@ class TopMenu extends React.Component {
     return (
       <StyledMenu mode="horizontal" theme="dark">
         <StyledLogo src={logo} />
-        <Menu.Item key={"topslider"} onClick={this.goToAnchor}>
-          Гид по музею
+        <Menu.Item>
+          <Link to="/">Гид по музею</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to={{ pathname: "/", hash: "description" }}>Описание</Link>
+          <Link to="/download">Скачать</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to="download">Скачать</Link>
-        </Menu.Item>
-        <Menu.Item key={"partners"} onClick={this.goToAnchor}>
-          Наши партнёры
-        </Menu.Item>
-        <Menu.Item key={"faq"} onClick={this.goToAnchor}>
-          FAQ
+          <Link to="/partners">Наши партнёры</Link>
         </Menu.Item>
         <Menu.Item>
-          <Link to="add-museum">Добавить музей</Link>
+          <Link to="/faq">FAQ</Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/add-museum">Добавить музей</Link>
         </Menu.Item>
       </StyledMenu>
     );

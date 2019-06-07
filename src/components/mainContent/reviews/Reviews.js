@@ -1,12 +1,12 @@
 import React from "react";
-import { Avatar, Divider, List, Rate } from "antd";
+import { Avatar, Divider, List, Rate } from "antd/lib/index";
 import styled from "styled-components";
-import avatar1 from "./images/avatars/avatar1.jpg";
-import avatar2 from "./images/avatars/avatar2.jpg";
-import avatar3 from "./images/avatars/avatar3.jpg";
-import avatar4 from "./images/avatars/avatar4.jpg";
-import avatar5 from "./images/avatars/avatar5.jpg";
-import avatar6 from "./images/avatars/avatar6.png";
+import avatar1 from "../../../assets/images/avatars/avatar1.jpg";
+import avatar2 from "../../../assets/images/avatars/avatar2.jpg";
+import avatar3 from "../../../assets/images/avatars/avatar3.jpg";
+import avatar4 from "../../../assets/images/avatars/avatar4.jpg";
+import avatar5 from "../../../assets/images/avatars/avatar5.jpg";
+import avatar6 from "../../../assets/images/avatars/avatar6.png";
 
 const ListItem = List.Item;
 

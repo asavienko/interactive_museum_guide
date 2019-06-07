@@ -1,13 +1,13 @@
 import React from "react";
-import { Divider } from "antd";
-import { Row, Col } from "antd";
+import { Divider } from "antd/lib/index";
+import { Row, Col } from "antd/lib/index";
 import styled from "styled-components";
 
 const WrapBoxAbout = styled.div`
   padding: 10px;
 `;
 
-function Home() {
+function Description() {
   return (
     <WrapBoxAbout>
       <Divider>Гид по музею</Divider>
@@ -35,4 +35,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Description;

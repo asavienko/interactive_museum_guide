@@ -1,4 +1,4 @@
-import { Typography } from "antd";
+import { Typography } from "antd/lib/index";
 import React from "react";
 import styled from "styled-components";
 import { Transition } from "react-transition-group";
@@ -85,7 +85,7 @@ const transitionStylesText = {
   exited: { opacity: 0 }
 };
 
-class SlideComponent extends React.Component {
+class TopSliderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -161,4 +161,4 @@ class SlideComponent extends React.Component {
   }
 }
 
-export default SlideComponent;
+export default TopSliderComponent;

@@ -5,9 +5,9 @@ const WrapperFooter = styled.div`
   background: #001529;
   height: 40px;
   color: #fff;
-  display: flex;
-  align-items: center;
   padding: 10px;
+  margin-top: auto;
+ 
 `;
 
 function Footer() {

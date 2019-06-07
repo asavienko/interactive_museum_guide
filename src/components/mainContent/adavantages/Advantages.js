@@ -1,11 +1,11 @@
 import React from "react";
-import { Divider, Row, Timeline } from "antd";
+import { Divider, Row, Timeline } from "antd/lib/index";
 import styled from "styled-components";
-import pic12 from "./images/pic12.jpg";
-
-const Advantages = styled.div`
+import pic12 from "../../../assets/images/pic12.jpg";
+//todo move font-size from px to vw;
+const StyledWrapper = styled.div`
   text-align: center;
-  font-size: 20px; //todo move from px to vw;
+  font-size: 20px; 
   font-weight: bold;
   color: #fff;
   :hover {
@@ -35,22 +35,15 @@ const StyledItem = styled(Timeline.Item)`
   }
 `;
 
-class Description extends React.Component {
-  componentDidMount() {
-    if (window.location.hash === "description");
-    {
-      const description = document.getElementById("description");
-      description.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+class Advantages extends React.Component {
 
   render() {
     return (
       <div id="description">
         <SectionAdvantages>
-          <Advantages>
+          <StyledWrapper>
             <StyledDivider>Наши преимущества</StyledDivider>
-          </Advantages>
+          </StyledWrapper>
           <Row type="flex" justify="center" align="middle">
             <Timeline>
               <StyledItem>Эксклюзивность</StyledItem>
@@ -77,4 +70,4 @@ class Description extends React.Component {
   }
 }
 
-export default Description;
+export default Advantages;

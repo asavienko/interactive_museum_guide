@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button, Col, Divider, Row } from "antd";
-import picture1 from "./images/preview/picture1.jpg";
-import picture2 from "./images/preview/picture2.jpg";
-import picture3 from "./images/preview/picture3.jpg";
-import picture4 from "./images/preview/picture4.jpg";
-import picture5 from "./images/preview/picture5.jpg";
-import picture6 from "./images/preview/picture6.jpg";
-import picture7 from "./images/preview/picture7.jpg";
-import picture8 from "./images/preview/picture8.jpg";
-import picture9 from "./images/preview/picture9.jpg";
-import picture10 from "./images/preview/picture10.jpg";
+import { Button, Col, Divider, Row } from "antd/lib/index";
+import picture1 from "../../../assets/images/preview/picture1.jpg";
+import picture2 from "../../../assets/images/preview/picture2.jpg";
+import picture3 from "../../../assets/images/preview/picture3.jpg";
+import picture4 from "../../../assets/images/preview/picture4.jpg";
+import picture5 from "../../../assets/images/preview/picture5.jpg";
+import picture6 from "../../../assets/images/preview/picture6.jpg";
+import picture7 from "../../../assets/images/preview/picture7.jpg";
+import picture8 from "../../../assets/images/preview/picture8.jpg";
+import picture9 from "../../../assets/images/preview/picture9.jpg";
+import picture10 from "../../../assets/images/preview/picture10.jpg";
 
 const BoxDescription = styled.div`
   margin: 15px;
@@ -33,7 +33,7 @@ const GalleryItem = styled.img`
   margin: 5px;
 `;
 
-function Download() {
+function AboutUs() {
   return (
     <div id="download">
       <Divider>О нас</Divider>
@@ -51,9 +51,11 @@ function Download() {
             веб-сайтам, для облегчения их поиска.
           </Col>
           <Col span={12} order={3}>
-            <BoxButton type="primary" icon="download" size="large">
-              Скачать
-            </BoxButton>
+            <Link to="/download">
+              <BoxButton type="primary" icon="download" size="large">
+                Скачать
+              </BoxButton>
+            </Link>
           </Col>
         </Row>
       </BoxDescription>
@@ -74,4 +76,4 @@ function Download() {
   );
 }
 
-export default Download;
+export default AboutUs;

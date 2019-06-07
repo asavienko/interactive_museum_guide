@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Divider, Collapse, Icon } from "antd";
+import { Divider, Collapse, Icon } from "antd/lib/index";
 
 const textOne = `
   Приложение поддерживают все современные устройства,  Mac/ПК , Android, iPhone, Windows Phone.

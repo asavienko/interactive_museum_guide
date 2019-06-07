@@ -1,20 +1,14 @@
 import React from "react";
 import { GoogleApiWrapper, Map } from "google-maps-react";
-import styled from "styled-components";
-
-const StyledMap = styled(Map)`
-  width: 90%;
-  height: 90%;
-  margin-left: auto;
-  margin-right: auto;
-`;
+import { connect } from "react-redux";
+import { setListOfPartners } from "../../../actions/partners";
 
 export class MapContainer extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  fetchPlaces(mapProps, map) {
+  fetchPlaces = (mapProps, map) => {
     const { google } = mapProps;
     const searchProperties = {
       mode: "no-cors",
@@ -31,11 +25,13 @@ export class MapContainer extends React.Component {
 
     const service = new google.maps.places.PlacesService(map);
     const infowindow = new google.maps.InfoWindow(infoWindowProperties);
-    service.nearbySearch(searchProperties, result =>
+
+    service.nearbySearch(searchProperties, result => {
+      this.props.setPartnersList(result);
       result.forEach(place => {
         createMarker(place);
-      })
-    );
+      });
+    });
 
     const createMarker = function(place) {
       const icon = {
@@ -57,11 +53,11 @@ export class MapContainer extends React.Component {
         infowindow.open(map, this);
       });
     };
-  }
+  };
 
   render() {
     return (
-      <StyledMap
+      <Map
         google={this.props.google}
         onReady={this.fetchPlaces}
         zoom={14}
@@ -77,7 +73,24 @@ export class MapContainer extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setPartnersList(places) {
+      dispatch(setListOfPartners(places));
+    }
+  };
+};
+const mapStateToProps = state => ({
+  listOfPartners: state.partners.listOfPartners
+});
+
+const mapComponent = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MapContainer);
+
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCPRn3rb3qvcFAqdi6_CwaxQgmiWZg-iL4",
   language: "ru"
-})(MapContainer);
+})(mapComponent);

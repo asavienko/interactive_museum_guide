@@ -1,13 +1,13 @@
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel } from "antd/lib/index";
 import styled from "styled-components";
-import brainLogo from "./images/brainLogo.svg";
-import video1 from "./video/video1.mp4";
-import video2 from "./video/video2.mp4";
-import video3 from "./video/video3.mp4";
-import SlideComponent from "./SlideComponent";
-import image123 from "./images/preview/image123.png";
-import image345 from "./images/preview/image345.png";
+import brainLogo from "../../../assets/images/brainLogo.svg";
+import video1 from "../../../assets/video/video1.mp4";
+import video2 from "../../../assets/video/video2.mp4";
+import video3 from "../../../assets/video/video3.mp4";
+import TopSliderComponent from "./TopSliderComponent";
+import image123 from "../../../assets/images/preview/image123.png";
+import image345 from "../../../assets/images/preview/image345.png";
 
 const StyledCarousel = styled(Carousel)`
   & .slick-slide {
@@ -15,7 +15,7 @@ const StyledCarousel = styled(Carousel)`
   }
 `;
 
-class TopSlider extends React.Component {
+class TopSliderContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,7 +43,7 @@ class TopSlider extends React.Component {
           beforeChange={this.setTransitionOut}
           pauseOnHover={false}
         >
-          <SlideComponent
+          <TopSliderComponent
             inProp={this.state.firstTransitionIn}
             startAnimation={this.startAnimation}
             logo={brainLogo}
@@ -53,7 +53,7 @@ class TopSlider extends React.Component {
             }
             videoSrc={video1}
           />
-          <SlideComponent
+          <TopSliderComponent
             inProp={this.state.firstTransitionIn}
             startAnimation={this.startAnimation}
             logo={image123}
@@ -61,7 +61,7 @@ class TopSlider extends React.Component {
             description={"легкость, информативность"}
             videoSrc={video2}
           />
-          <SlideComponent
+          <TopSliderComponent
             inProp={this.state.firstTransitionIn}
             startAnimation={this.startAnimation}
             logo={image345}
@@ -77,4 +77,4 @@ class TopSlider extends React.Component {
   }
 }
 
-export default TopSlider;
+export default TopSliderContainer;
