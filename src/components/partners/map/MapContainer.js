@@ -8,6 +8,7 @@ export class MapContainer extends React.Component {
     super(props);
   }
 
+
   fetchPlaces = (mapProps, map) => {
     const { google } = mapProps;
     const searchProperties = {
@@ -31,6 +32,7 @@ export class MapContainer extends React.Component {
       result.forEach(place => {
         createMarker(place);
       });
+
     });
 
     const createMarker = function(place) {
@@ -53,6 +55,8 @@ export class MapContainer extends React.Component {
         infowindow.open(map, this);
       });
     };
+    console.log(mapProps);
+    console.log(map);
   };
 
   render() {
@@ -60,6 +64,7 @@ export class MapContainer extends React.Component {
       <Map
         google={this.props.google}
         onReady={this.fetchPlaces}
+        setIsLoadingMap={this.props.setLoadingMap}
         zoom={14}
         initialCenter={{
           lat: 50.004985,

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import MapContainer from "./map/MapContainer";
 import styled from "styled-components";
 import { Col, Row } from "antd/es/index";
 import ListOfPartners from "./map/listOfPartners/ListOfPartners";
-import { Divider } from "antd";
+import { Divider, Spin } from "antd";
 import Footer from "../footer/Footer";
 
 const StyledMapContainer = styled.div`
