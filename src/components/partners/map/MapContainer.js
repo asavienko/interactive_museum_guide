@@ -1,13 +1,14 @@
 import React from "react";
-import { GoogleApiWrapper, Map } from "google-maps-react";
+import myMarker from "../../../assets/images/marker.svg";
+import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
 import { connect } from "react-redux";
 import { setListOfPartners } from "../../../actions/partners";
+import _ from "lodash";
 
 export class MapContainer extends React.Component {
   constructor(props) {
     super(props);
   }
-
 
   fetchPlaces = (mapProps, map) => {
     const { google } = mapProps;
@@ -23,7 +24,6 @@ export class MapContainer extends React.Component {
     const infoWindowProperties = {
       pixelOffset: new google.maps.Size(-24, 0)
     };
-
     const service = new google.maps.places.PlacesService(map);
     const infowindow = new google.maps.InfoWindow(infoWindowProperties);
 
@@ -32,16 +32,15 @@ export class MapContainer extends React.Component {
       result.forEach(place => {
         createMarker(place);
       });
-
     });
 
-    const createMarker = function(place) {
+    const createMarker = place => {
       const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
+        url: myMarker,
+        size: new google.maps.Size(35, 35),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
+        scaledSize: new google.maps.Size(35, 35)
       };
       const markerProperties = {
         map: map,
@@ -55,16 +54,23 @@ export class MapContainer extends React.Component {
         infowindow.open(map, this);
       });
     };
-    console.log(mapProps);
-    console.log(map);
+  };
+  selectedPlaceGeometry = selectedPlace => {
+    return (
+      !_.isEmpty(selectedPlace) && {
+        lat: selectedPlace.geometry.location.lat(),
+        lng: selectedPlace.geometry.location.lng()
+      }
+    );
   };
 
   render() {
+    const { selectedPlace, google, setLoadingMap } = this.props;
     return (
       <Map
-        google={this.props.google}
+        google={google}
         onReady={this.fetchPlaces}
-        setIsLoadingMap={this.props.setLoadingMap}
+        setIsLoadingMap={setLoadingMap}
         zoom={14}
         initialCenter={{
           lat: 50.004985,
@@ -74,7 +80,15 @@ export class MapContainer extends React.Component {
         streetViewControl={false}
         fullscreenControl={false}
         gestureHandling={"cooperative"}
-      />
+      >
+        {!_.isEmpty(selectedPlace) && (
+          <Marker
+            position={this.selectedPlaceGeometry(selectedPlace)}
+            visible={!_.isEmpty(selectedPlace)}
+            icon={myMarker}
+          />
+        )}
+      </Map>
     );
   }
 }

@@ -28,15 +28,12 @@ class ListOfPartners extends React.Component {
       this.props.listOfPartners &&
       this.props.listOfPartners.length > 0
     ) {
-      this.setState({isLoading: false});
+      this.setState({ isLoading: false });
     }
   }
-  setSelectedMarker = () => {
-
-  };
 
   render() {
-    const { listOfPartners } = this.props;
+    const { listOfPartners, getSelectedPlace, clearSelectedPlace } = this.props;
     return (
       <StyledList
         loading={this.state.isLoading}
@@ -48,7 +45,8 @@ class ListOfPartners extends React.Component {
             <List.Item
               key={place.id}
               extra={<StyledImage alt="logo" src={imgUrl || noImagePng} />}
-              onClick={this.setSelectedMarker}
+              onMouseEnter={() => getSelectedPlace(place)}
+              onMouseLeave={clearSelectedPlace}
             >
               <List.Item.Meta title={place.name} />
             </List.Item>
@@ -63,4 +61,7 @@ const mapStateToProps = state => ({
   listOfPartners: state.partners.listOfPartners
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListOfPartners);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ListOfPartners);

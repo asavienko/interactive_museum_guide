@@ -23,6 +23,13 @@ const StyledWrapper = styled.div`
 `;
 
 function Partners() {
+  const [selectedPlace, setSelectedPlace] = useState({});
+  const getSelectedPlace = place => {
+    setSelectedPlace(place);
+  };
+  const clearSelectedPlace = () => {
+    setSelectedPlace({});
+  };
   return (
     <StyledWrapper id="partners">
       <Divider>Наши партнеры</Divider>
@@ -30,11 +37,14 @@ function Partners() {
         <Row type="flex" justify="space-between" gutter={6}>
           <Col span={16}>
             <StyledMapContainer>
-              <MapContainer />
+              <MapContainer selectedPlace={selectedPlace} />
             </StyledMapContainer>
           </Col>
           <Col span={8}>
-            <ListOfPartners />
+            <ListOfPartners
+              getSelectedPlace={getSelectedPlace}
+              clearSelectedPlace={clearSelectedPlace}
+            />
           </Col>
         </Row>
       </StyledDiv>
