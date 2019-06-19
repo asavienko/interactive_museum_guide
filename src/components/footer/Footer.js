@@ -7,7 +7,6 @@ const WrapperFooter = styled.div`
   color: #fff;
   padding: 10px;
   margin-top: auto;
- 
 `;
 
 function Footer() {

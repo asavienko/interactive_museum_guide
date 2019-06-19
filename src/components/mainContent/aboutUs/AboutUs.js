@@ -61,16 +61,16 @@ function AboutUs() {
       </BoxDescription>
 
       <WrapGallery>
-        <GalleryItem src={picture1} alt="" />
-        <GalleryItem src={picture2} alt="" />
-        <GalleryItem src={picture3} alt="" />
-        <GalleryItem src={picture4} alt="" />
-        <GalleryItem src={picture5} alt="" />
-        <GalleryItem src={picture6} alt="" />
-        <GalleryItem src={picture7} alt="" />
-        <GalleryItem src={picture8} alt="" />
-        <GalleryItem src={picture9} alt="" />
-        <GalleryItem src={picture10} alt="" />
+        <GalleryItem src={picture4} alt="image not found" />
+        <GalleryItem src={picture1} alt="image not found" />
+        <GalleryItem src={picture5} alt="image not found" />
+        <GalleryItem src={picture6} alt="image not found" />
+        <GalleryItem src={picture7} alt="image not found" />
+        <GalleryItem src={picture3} alt="image not found" />
+        <GalleryItem src={picture8} alt="image not found" />
+        <GalleryItem src={picture9} alt="image not found" />
+        <GalleryItem src={picture10} alt="image not found" />
+        <GalleryItem src={picture2} alt="image not found" />
       </WrapGallery>
     </div>
   );

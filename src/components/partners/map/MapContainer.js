@@ -12,6 +12,7 @@ export class MapContainer extends React.Component {
 
   fetchPlaces = (mapProps, map) => {
     const { google } = mapProps;
+    const { setPartnersList } = this.props;
     const searchProperties = {
       mode: "no-cors",
       keyword: "Музей",
@@ -28,7 +29,7 @@ export class MapContainer extends React.Component {
     const infowindow = new google.maps.InfoWindow(infoWindowProperties);
 
     service.nearbySearch(searchProperties, result => {
-      this.props.setPartnersList(result);
+      setPartnersList(result);
       result.forEach(place => {
         createMarker(place);
       });
@@ -43,8 +44,8 @@ export class MapContainer extends React.Component {
         scaledSize: new google.maps.Size(35, 35)
       };
       const markerProperties = {
-        map: map,
-        icon: icon,
+        map,
+        icon,
         position: place.geometry.location
       };
 
@@ -70,7 +71,6 @@ export class MapContainer extends React.Component {
       <Map
         google={google}
         onReady={this.fetchPlaces}
-        setIsLoadingMap={setLoadingMap}
         zoom={14}
         initialCenter={{
           lat: 50.004985,

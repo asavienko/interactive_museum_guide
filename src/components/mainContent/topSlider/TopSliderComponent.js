@@ -29,17 +29,30 @@ const StyledLogoImage = styled.img`
   margin-right: 1rem;
   opacity: 0.94;
   object-fit: cover;
+  transition: transform 500ms ease-in-out;
+  transform: translate(
+    ${({ state }) =>
+      state === "entering" || state === "entered" ? 0 : "-100vw"}
+  );
 `;
 const StyledTitle = styled(Title)`
   color: white !important;
   width: max-content;
   max-width: 70vw;
   text-shadow: 0 0.3vw 0.9vw black;
+  transition: transform 500ms ease-in-out;
+  transform: translate(
+    ${({ state }) =>
+      state === "entering" || state === "entered" ? 0 : "100vw"}
+  );
 `;
 const StyledText = styled(Text)`
   font-size: 1.1rem;
   color: white !important;
   text-shadow: 0 0.3vw 0.9vw black;
+  transition: opacity 500ms ease-in-out;
+  opacity: ${({ state }) =>
+    state === "entering" || state === "entered" ? 1 : 0};
 `;
 const StyledAnimateDiv = styled.div`
   position: absolute;
@@ -55,36 +68,6 @@ const StyledWrapper = styled.div`
   position: relative;
 `;
 
-const duration = 500;
-
-const defaultStyle = {
-  transition: `transform ${duration}ms ease-in-out`
-};
-const imageTransitionStyle = {
-  transition: `opacity ${duration}ms ease-in-out`
-};
-
-const transitionStylesLogo = {
-  entering: { transform: "translate(0)" },
-  entered: { transform: "translate(0)" },
-  exiting: { transform: "translate(-100vw)" },
-  exited: { transform: "translate(-100vw)" }
-};
-
-const transitionStylesTitle = {
-  entering: { transform: "translate(0vw)" },
-  entered: { transform: "translate(0vw)" },
-  exiting: { transform: "translate(100vw)" },
-  exited: { transform: "translate(100vw)" }
-};
-
-const transitionStylesText = {
-  entering: { opacity: 1 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 }
-};
-
 class TopSliderComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -94,10 +77,12 @@ class TopSliderComponent extends React.Component {
   }
 
   secondTransitionStart = () => {
-    this.setState({ secondTransitionIn: true });
+    const { secondTransitionIn } = this.state;
+    this.setState({ secondTransitionIn: !secondTransitionIn });
   };
   secondTransitionStop = () => {
-    this.setState({ secondTransitionIn: false });
+    const { secondTransitionIn } = this.state;
+    this.setState({ secondTransitionIn: !secondTransitionIn });
   };
 
   render() {
@@ -107,41 +92,23 @@ class TopSliderComponent extends React.Component {
         <StyledAnimateDiv>
           <Transition
             in={inProp}
-            timeout={duration}
+            timeout={500}
             onEntered={this.secondTransitionStart}
             onExiting={this.secondTransitionStop}
           >
             {state => (
               <StyledWrapper>
-                <StyledLogoImage
-                  src={logo}
-                  style={{
-                    ...defaultStyle,
-                    ...transitionStylesLogo[state]
-                  }}
-                />
+                <StyledLogoImage src={logo} state={state} />
               </StyledWrapper>
             )}
           </Transition>
-          <Transition in={this.state.secondTransitionIn} timeout={duration}>
+          <Transition in={this.state.secondTransitionIn} timeout={500}>
             {state => (
               <div>
-                <StyledTitle
-                  level={3}
-                  style={{
-                    ...defaultStyle,
-                    ...transitionStylesTitle[state]
-                  }}
-                >
+                <StyledTitle level={3} state={state}>
                   {title}
                 </StyledTitle>
-                <StyledText
-                  string
-                  style={{
-                    ...imageTransitionStyle,
-                    ...transitionStylesText[state]
-                  }}
-                >
+                <StyledText string state={state}>
                   {description}
                 </StyledText>
               </div>
