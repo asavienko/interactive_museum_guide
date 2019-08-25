@@ -29,9 +29,6 @@ const TopMenu = () => {
       <Menu.Item>
         <Link to="/faq">FAQ</Link>
       </Menu.Item>
-      <Menu.Item>
-        <Link to="/add-museum">Добавить музей</Link>
-      </Menu.Item>
     </StyledMenu>
   );
 };

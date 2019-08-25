@@ -4,7 +4,6 @@ import MainContent from "./mainContent/MainContent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled from "styled-components";
 import "antd/dist/antd.css";
-import AddMuseum from "./addMuseum/AddMuseum";
 import Faq from "./faq/Faq";
 import Partners from "./partners/Partners";
 
@@ -24,7 +23,6 @@ function App() {
       <StyledApp>
         <TopMenu />
         <Route path="/" exact component={MainContent} />
-        <Route path="/add-museum" component={AddMuseum} />
         <Route path="/faq" component={Faq} />
         <Route path="/partners" component={Partners} />
       </StyledApp>
