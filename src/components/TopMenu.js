@@ -24,9 +24,6 @@ const TopMenu = () => {
         <Link to="/">Гид по музею</Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/download">Скачать</Link>
-      </Menu.Item>
-      <Menu.Item>
         <Link to="/partners">Наши партнёры</Link>
       </Menu.Item>
       <Menu.Item>

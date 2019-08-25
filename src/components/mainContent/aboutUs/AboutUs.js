@@ -50,13 +50,6 @@ function AboutUs() {
             историко-художественных материалов, разбросанных по разным
             веб-сайтам, для облегчения их поиска.
           </Col>
-          <Col span={12} order={3}>
-            <Link to="/download">
-              <BoxButton type="primary" icon="download" size="large">
-                Скачать
-              </BoxButton>
-            </Link>
-          </Col>
         </Row>
       </BoxDescription>
 
