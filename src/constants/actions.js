@@ -1,0 +1,1 @@
+export const GET_LIST_OF_PARTNERS = "GET_LIST_OF_PARTNERS";
