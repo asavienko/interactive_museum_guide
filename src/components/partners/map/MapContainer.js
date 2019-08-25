@@ -1,5 +1,6 @@
 import React from "react";
 import myMarker from "../../../assets/images/marker.svg";
+import mySelectedMarker from "../../../assets/images/selectedMarker.svg";
 import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
 import { connect } from "react-redux";
 import { setListOfPartners } from "../../../actions/partners";
@@ -85,7 +86,7 @@ export class MapContainer extends React.Component {
           <Marker
             position={this.selectedPlaceGeometry(selectedPlace)}
             visible={!_.isEmpty(selectedPlace)}
-            icon={myMarker}
+            icon={mySelectedMarker}
           />
         )}
       </Map>
