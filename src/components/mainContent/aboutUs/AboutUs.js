@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button, Col, Divider, Row } from "antd/lib/index";
+import { Col, Divider, Row } from "antd/lib/index";
 import picture1 from "../../../assets/images/preview/picture1.jpg";
 import picture2 from "../../../assets/images/preview/picture2.jpg";
 import picture3 from "../../../assets/images/preview/picture3.jpg";
@@ -15,10 +14,6 @@ import picture10 from "../../../assets/images/preview/picture10.jpg";
 
 const BoxDescription = styled.div`
   margin: 15px;
-`;
-const BoxButton = styled(Button)`
-  margin: 15px 0;
-  width: 100%;
 `;
 const WrapGallery = styled.div`
   display: flex;

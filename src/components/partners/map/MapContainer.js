@@ -7,10 +7,6 @@ import { setListOfPartners } from "../../../actions/partners";
 import _ from "lodash";
 
 export class MapContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   fetchPlaces = (mapProps, map) => {
     const { google } = mapProps;
     const { setPartnersList } = this.props;
@@ -67,7 +63,7 @@ export class MapContainer extends React.Component {
   };
 
   render() {
-    const { selectedPlace, google, setLoadingMap } = this.props;
+    const { selectedPlace, google} = this.props;
     return (
       <Map
         google={google}
